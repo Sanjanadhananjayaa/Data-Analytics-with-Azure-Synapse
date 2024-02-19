@@ -1,1 +1,20 @@
-
+[
+  {
+    "Name": "Data-Analytics-with-Azure-Synapse",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse/main/Instructions/Labs/00-GettingStarted-V2.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse/main/Instructions/Labs/02-Analyze-data-with-sql.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse/main/Instructions/Labs/03-Transform-data-with-sql.md",
+        "Order": 3
+      }
+    ]
+  }
+]
