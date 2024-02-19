@@ -1,4 +1,4 @@
-# Lab 09: Load Data into a Relational Data Warehouse
+# Lab 07: Load Data in Relational Data warehouse in Synapse
 
 ## Lab Scenario
 
