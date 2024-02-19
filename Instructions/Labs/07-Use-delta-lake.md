@@ -1,4 +1,4 @@
-# Lab 07: Use Delta Lake with Spark in Azure Synapse Analytics
+# Lab 07: Using Delta Lake with Spark in Azure Synapse Analytics
 
 ## Lab Scenario
 
