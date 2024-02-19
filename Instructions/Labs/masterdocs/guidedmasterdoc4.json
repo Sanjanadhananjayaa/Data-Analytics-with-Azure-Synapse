@@ -1,1 +1,16 @@
-
+[
+  {
+    "Name": "Data-Analytics-with-Azure-Synapse",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse/main/Instructions/Labs/00-GettingStarted-V2.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse/main/Instructions/Labs/07-Use-delta-lake.md",
+        "Order": 2
+      }
+    ]
+  }
+]
