@@ -1,4 +1,4 @@
-# Lab 06: Transform data using Spark in Synapse Analytics
+# Lab 05: Transform data using Spark in Synapse Analytics
 
 ## Lab Scenario
 
