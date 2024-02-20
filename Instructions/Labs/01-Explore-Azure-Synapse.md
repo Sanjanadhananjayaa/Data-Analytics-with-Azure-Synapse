@@ -93,7 +93,7 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
         - **Name**: Products
         - **Description**: Product list via HTTP
         - **Connect via integration runtime**: AutoResolveIntegrationRuntime
-        - **Base URL**: `https://raw.githubusercontent.com/MicrosoftLearning/dp-203-azure-data-engineer/master/Allfiles/labs/01/adventureworks/products.csv`
+        - **Base URL**: `https://raw.githubusercontent.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse/main/Allfiles/labs/01/adventureworks/products.csv`
         - **Server Certificate Validation**: Enable
         - **Authentication type**: Anonymous
 4. After creating the connection, on the **Source data store** page, ensure the following settings are selected, and then select **Next >**:
@@ -378,7 +378,7 @@ So far you've seen some techniques for exploring and processing file-based data 
 9. After the code has run successfully, replace it with the following code, which loads data into the table:
 
     ```kusto
-    .ingest into table sales 'https://raw.githubusercontent.com/microsoftlearning/dp-203-azure-data-engineer/master/Allfiles/labs/01/files/sales.csv' 
+    .ingest into table sales 'https://raw.githubusercontent.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse/main/Allfiles/labs/01/files/sales.csv' 
     with (ignoreFirstRecord = true)
     ```
 
