@@ -89,7 +89,7 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
 2. In the Copy Data tool, on the **Properties** step, ensure that **Built-in copy task** and **Run once now** are selected, and click **Next >**.
 3. On the **Source** step, in the **Dataset** substep, select the following settings:
     - **Source type**: All
-    - **Connection**: *Create a new connection, and in the **New Connection** pane that appears, on the **Generic protocol** tab, select **HTTP**. Then continue and create a connection to a data file using the following settings:*
+    - **Connection**: *Create a new connection, and in the **New Connection** pane that appears, on the **Generic protocol** tab, select **HTTP**. Then continue and create a connection to a data file using the following settings and click **Create**:*
         - **Name**: Products
         - **Description**: Product list via HTTP
         - **Connect via integration runtime**: AutoResolveIntegrationRuntime
@@ -140,11 +140,18 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
 
 ### Task 3.2: View the ingested data
 
-1. On the **Data** page, select the **Linked** tab and expand the **synapse*xxxxxxx* (Primary) datalake** container hierarchy until you see the **files** file storage for your Synapse workspace. Then select the file storage to verify that a folder named **product_data** containing a file named **products.csv** has been copied to this location, as shown here:
+1. On the **Data** page, select the **Linked** tab and expand the **Azure Data Lake Storage Gen2** and then expand **synapse*xxxxxxx* (Primary) datalake** container hierarchy until you see the **files** file storage for your Synapse workspace. Then select the file storage to verify that a folder named **product_data** containing a file named **products.csv** has been copied to this location, as shown here:
 
     ![Image showing Synapse Studio expanded Azure Data Lake Storage hierarchy with the file storage for your Synapse workspace](./images/product_files.png)
 
 2. Right-click the **products.csv** data file and select **Preview** to view the ingested data. Then close the preview.
+
+  **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ## Task 4: Use a serverless SQL pool to analyze data
 
@@ -292,7 +299,7 @@ While SQL is a common language for querying structured datasets, many data analy
 
     Notice that running the cell again takes less time, because the Spark pool is already started.
 
-8. Under the results, use the **&#65291; Code** icon to add a new code cell to the notebook.
+8. Under the results, use the **&#65291; Code** icon to add a new code cell to the notebook. Hover under the results if you don't see **&#65291; Code** icon.
 9. In the new empty code cell, add the following code:
 
     ```Python
@@ -320,7 +327,7 @@ While SQL is a common language for querying structured datasets, many data analy
 
 So far you've seen some techniques for exploring and processing file-based data in a data lake. In many cases, an enterprise analytics solution uses a data lake to store and prepare unstructured data that can then be loaded into a relational data warehouse to support business intelligence (BI) workloads. In Azure Synapse Analytics, these data warehouses can be implemented in a dedicated SQL pool.
 
-1. In Synapse Studio, on the **Manage** page, in the **SQL pools** section, select the **sql*xxxxxxx*** dedicated SQL pool row and then use its **&#9655;** icon to resume it.
+1. In Synapse Studio, on the **Manage** page, in the **SQL pools** section, select the **sql*xxxxxxx*** dedicated SQL pool row and then use its **&#9655;** icon to resume it. Select **Resume** when prompted.
 2. Wait for the SQL pool to start. This can take a few minutes. Use the **&#8635; Refresh** button to check its status periodically. The status will show as **Online** when it is ready.
 3. When the SQL pool has started, select the **Data** page; and on the **Workspace** tab, expand **SQL databases** and verify that **sql*xxxxxxx*** is listed (use **&#8635;** icon at the top-left of the page to refresh the view if necessary).
 4. Expand the **sql*xxxxxxx*** database and its **Tables** folder,  and then in the **...** menu for the **FactInternetSales** table, point to **New SQL script**, and select **Select TOP 100 rows**.
@@ -342,7 +349,7 @@ So far you've seen some techniques for exploring and processing file-based data 
 
 9. Close the query pane, and then view the **Develop** page to verify that the SQL script has been saved.
 
-10. On the **Manage** page, select the **sql*xxxxxxx*** dedicated SQL pool row and use its &#10074;&#10074; icon to pause it.
+10. On the **Manage** page, select the **sql*xxxxxxx*** dedicated SQL pool row and use its &#10074;&#10074; icon to pause it. Click **Pause** if prompted.
 
 ### Task 6.1: Create a Data Explorer database and ingest data into a table [READ ONLY]
 
