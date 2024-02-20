@@ -38,6 +38,7 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 3. In the PowerShell pane, enter the following commands to clone this repo:
 
     ```
+    rm -r synapse -f
     git clone https://github.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse synapse
     ```
 
