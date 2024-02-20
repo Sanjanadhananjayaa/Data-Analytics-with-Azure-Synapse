@@ -34,14 +34,14 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 3. In the PowerShell pane, manually enter the following commands to clone this repo:
 
     ```
-    rm -r dp500 -f
-    git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst dp500
+    rm -r synapse -f
+    git clone https://github.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse synapse
     ```
 
 4. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.ps1** script it contains:
 
     ```
-    cd dp500/Allfiles/01
+    cd synapse/Allfiles/00
     ./setup.ps1
     ```
 
