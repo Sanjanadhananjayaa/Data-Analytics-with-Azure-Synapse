@@ -38,14 +38,13 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 3. In the PowerShell pane, enter the following commands to clone this repo:
 
     ```
-    rm -r dp-203 -f
-    git clone https://github.com/MicrosoftLearning/dp-203-azure-data-engineer dp-203
+    git clone https://github.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse synapse
     ```
 
 4. After the repo has been cloned, enter the following commands to change to the folder for this exercise and run the **setup.ps1** script it contains:
 
     ```
-    cd dp-203/Allfiles/labs/01
+    cd synapse/Allfiles/labs/01
     ./setup.ps1
     ```
 
@@ -60,7 +59,7 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
 *Synapse Studio* is a web-based portal in which you can manage and work with the resources in your Azure Synapse Analytics workspace.
 
-1. When the setup script has finished running, in the Azure portal, go to the **dp203-*xxxxxxx*** resource group that it created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, an Apache Spark pool and a Dedicated SQL pool.
+1. When the setup script has finished running, in the Azure portal, go to the **synapse*** resource group that it created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, an Apache Spark pool and a Dedicated SQL pool.
 2. Select your Synapse workspace, and in its **Overview** page, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab. Synapse Studio is a web-based interface that you can use to work with your Synapse Analytics workspace.
 3. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks, as shown here:
 
