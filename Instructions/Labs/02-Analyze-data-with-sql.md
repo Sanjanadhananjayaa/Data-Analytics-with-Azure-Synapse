@@ -109,7 +109,7 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 
     This code uses the OPENROWSET to read data from the CSV files in the sales folder and retrieves the first 100 rows of data.
 
-5. In the **Connect to** list, ensure **Built-in** is selected - this represents the built-in SQL Pool that was created with your workspace.
+5. Select the **...** next to publish and in the **Connect to** list, ensure **Built-in** is selected - this represents the built-in SQL Pool that was created with your workspace.
 
 6. On the toolbar, use the **&#9655; Run** button to run the SQL code, and review the results, which should look similar to this:
 
@@ -249,7 +249,7 @@ JSON is another popular data format, so it;s useful to be able to query .json fi
 
 5. Run the modified code and observe that the results include a JSON document for each order.
 
-6. Modify the query as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) so that it uses the JSON_VALUE function to extract individual field values from the JSON data.
+6. Modify the query as follows (replacing *datalakexxxxxxx* with the name of your data lake storage account) and run the modified code so that it uses the JSON_VALUE function to extract individual field values from the JSON data.
 
     ```sql
     SELECT JSON_VALUE(Doc, '$.SalesOrderNumber') AS OrderNumber,
@@ -275,7 +275,7 @@ So far, you've used the OPENROWSET function in a SELECT query to retrieve data f
 
 By defining an external data source in a database, you can use it to reference the data lake location where the files are stored.
 
-1. In Synapse Studio, on the **Develop** page, in the **+** menu, select **SQL script**.
+1. In Synapse Studio, on the **Develop** page, select **+** menu and then select **SQL script**.
 
 2. In the new script pane, add the following code (replacing *datalakexxxxxxx* with the name of your data lake storage account) to create a new database and add an external data source to it and run it.
 
