@@ -35,14 +35,14 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 3. In the PowerShell pane, enter the following commands to clone this repo:
 
     ```
-    rm -r dp-203 -f
-    git clone https://github.com/MicrosoftLearning/dp-203-azure-data-engineer dp-203
+    rm -r synapse -f
+    git clone https://github.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse synapse
     ```
 
 4. After the repo has been cloned, enter the following commands to change to the folder for this exercise and run the **setup.ps1** script it contains:
 
     ```
-    cd dp-203/Allfiles/labs/03
+    cd synapse/Allfiles/labs/03
     ./setup.ps1
     ```
 
@@ -60,7 +60,7 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 
 ### Task 2.1: View files in the data lake
 
-1. After the script has completed, in the Azure portal, go to the **dp203-*xxxxxxx*** resource group that it created, and select your Synapse workspace.
+1. After the script has completed, in the Azure portal, go to the **analytics-*xxxxxxx*** resource group that it created, and select your Synapse workspace.
    
 2. In the **Overview** page for your Synapse workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
    
