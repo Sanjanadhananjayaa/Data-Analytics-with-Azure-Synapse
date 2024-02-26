@@ -60,7 +60,7 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 
 ### Task 2.1: View files in the data lake
 
-1. After the script has completed, in the Azure portal, go to the **analytics-*xxxxxxx*** resource group that it created, and select your Synapse workspace.
+1. After the script has completed, in the Azure portal, go to the **analytics** resource group that it created, and select your Synapse workspace.
    
 2. In the **Overview** page for your Synapse workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
    
