@@ -34,14 +34,14 @@ In this task, you'll use a combination of a PowerShell script and an ARM templat
 3. In the PowerShell pane, enter the following commands to clone this repo:
 
     ```
-    rm -r dp-203 -f
-    git clone https://github.com/MicrosoftLearning/dp-203-azure-data-engineer dp-203
+    rm -r synapse -f
+    git clone https://github.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse synapse
     ```
 
 4. After the repo has been cloned, enter the following commands to change to the folder for this exercise and run the **setup.ps1** script it contains:
 
     ```
-    cd dp-203/Allfiles/labs/06
+    cd synapse/Allfiles/labs/06
     ./setup.ps1
     ```
 
@@ -55,7 +55,7 @@ In this task, you'll use a combination of a PowerShell script and an ARM templat
 
 ## Task 2: Use a Spark notebook to transform data
 
-1. After the deployment script has completed, in the Azure portal, go to the **dp203-*xxxxxxx*** resource group that it created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
+1. After the deployment script has completed, in the Azure portal, go to the **data-*xxxxxxx*** resource group that it created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
 
 2. Select your Synapse workspace, and in its **Overview** page, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab, sign in if prompted.
 
