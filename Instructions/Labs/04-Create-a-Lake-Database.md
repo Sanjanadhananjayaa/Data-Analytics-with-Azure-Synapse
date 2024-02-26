@@ -259,7 +259,7 @@ Now that you have some tables in your database, you can use them to work with th
 
 1. In the **Develop** pane, in the **+** menu, select **Notebook**.
 
-2. In the new **Notebook 1** pane, attach the notebook to the **spark*xxxxxxx**** Spark pool.
+2. In the new **Notebook 1** pane, select the dropdown beside **Attach to** and select **spark*xxxxxxx**** Spark pool.
 
 3. Enter the following code in the empty notebook cell:
 
