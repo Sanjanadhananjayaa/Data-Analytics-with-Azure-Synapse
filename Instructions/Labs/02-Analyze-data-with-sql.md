@@ -45,9 +45,11 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
     ./setup.ps1
     ```
 
-5. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
+5. If prompted, provided resource group already exists. Are you sure want to update it. Enter **Y** and press enter.
 
-6. When prompted, enter a suitable password to be set for your Azure Synapse SQL pool.
+6. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
+
+7. When prompted, enter a suitable password to be set for your Azure Synapse SQL pool.
 
     > **Note**: Be sure to remember this password!
 
