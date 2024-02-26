@@ -60,13 +60,11 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
 2. Select the **Storage account** named **datalakexxxxxxx** 
 
-     ![Data lake navigation to container](./images/datalakexxxxxx-storage.png)
-
 3. Within the **datalakexxxxxx** container, select the **files** folder.
 
     ![Select the files folder within the data lake container](./images/dp203-Container.png)
 
-4. Within the **files** folder you'll note the **Authentication method:** is listed as ***Access key (Switch to Azure AD User Account)*** click on this to change to Azure AD User Account.
+4. Within the **files** folder you'll note the **Authentication method:** is listed as ***Access key (Switch to Microsoft Entra user account)*** click on this to change to Microsoft Entra User Account.
 
     ![Change to Azure AD user account](./images/dp203-switch-to-aad-user.png)
 
@@ -88,9 +86,9 @@ A lake database is a type of database that you can define in your workspace, and
 
 7. At the top of the **RetailDB** pane, select **Publish** to save the database so far.
 
-8. In the **Data** pane on the left, view the **Linked** tab. Then expand **Azure Data Lake Storage Gen2** and the primary **datalake*xxxxxxx*** store for your **synapse*xxxxxxx*** workspace, and select the **files** file system, which currently contains a folder named **synapse**.
+8. In the **Data** pane on the left, view the **Linked** tab. Then expand **Azure Data Lake Storage Gen2** and the primary **datalake*xxxxxxx*** storage for your **synapse*xxxxxxx*** workspace, and select the **files** file system, which currently contains a folder named **synapse**.
 
-9.  In the **files** tab that has opened, select **More** dropdown, then **New folder** button to create a new folder named **RetailDB** - this will be the input folder for the data files used by tables in your database.
+9.  In the **files** tab that has opened, select **More** dropdown, then select **New folder** button to create a new folder named **RetailDB** - this will be the input folder for the data files used by tables in your database.
 
 ## Task 4: Create a table
 
