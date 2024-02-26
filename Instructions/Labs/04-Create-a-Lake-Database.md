@@ -56,7 +56,7 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
 ## Task 2: Modify container permissions
 
-1. After the deployment script has completed, in the Azure portal, go to the **analytics-*xxxxxxx*** resource group that it created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
+1. After the deployment script has completed, in the Azure portal, go to the **analytics** resource group that it created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
 
 2. Select the **Storage account** named **datalakexxxxxxx** 
 
