@@ -55,7 +55,7 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
 ## Task 2: Prepare to load data
 
-1. After the script has completed, in the Azure portal, go to the **synapse** resource group that it created, and select your Synapse workspace.
+1. After the script has completed, in the Azure portal, go to the **analytics** resource group that it created, and select your Synapse workspace.
 2. In the **Overview page** for your Synapse Workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
 3. On the left side of Synapse Studio, use the ›› icon to expand the menu - revealing the different pages within Synapse Studio that you’ll use to manage resources and perform data analytics tasks.
 4. On the **Manage** page, on the **SQL pools** tab, select the row for the **sql*xxxxxxx*** dedicated SQL pool, which hosts the data warehouse for this exercise, and use its **&#9655;** icon to start it; confirming that you want to resume it when prompted.
