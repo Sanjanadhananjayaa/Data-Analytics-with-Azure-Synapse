@@ -58,7 +58,7 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 1. After the script has completed, in the Azure portal, go to the **analytics** resource group that it created, and select your Synapse workspace.
 2. In the **Overview page** for your Synapse Workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
 3. On the left side of Synapse Studio, use the ›› icon to expand the menu - revealing the different pages within Synapse Studio that you’ll use to manage resources and perform data analytics tasks.
-4. On the **Manage** page, on the **SQL pools** tab, select the row for the **sql*xxxxxxx*** dedicated SQL pool, which hosts the data warehouse for this exercise, and use its **&#9655;** icon to start it; confirming that you want to resume it when prompted.
+4. On the **Manage** page, on the **SQL pools** tab, select the row for the **sql*xxxxxxx*** dedicated SQL pool, which hosts the data warehouse for this exercise, and use its **&#9655;** icon to start it if its not started; confirming that you want to resume it when prompted.
 
     Resuming the pool can take a few minutes. You can use the **&#8635; Refresh** button to check its status periodically. The status will show as **Online** when it's ready. While you're waiting, proceed with the steps below to view the data files you will load.
 
@@ -74,8 +74,7 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 Let's look at some SQL Based approaches to loading data into the Data Warehouse.
 
 1. On the  **Data** page, select the **workspace** tab.
-2. Expand **SQL Database** and select your **sql*xxxxxxx*** database. Then in its **...** menu, select **New SQL Script** > 
-**Empty Script**.
+2. Expand **SQL Database** and select your **sql*xxxxxxx*** database. Then in its **...** menu, select **New SQL Script** >**Empty Script**.
 
 You now have a blank SQL page, which is connected to the instance for the following exercises. You will use this script to explore several SQL techniques that you can use to load data.
 
@@ -128,7 +127,7 @@ You now have a blank SQL page, which is connected to the instance for the follow
     );
     ```
 
-6. Run the script and review the resulting message. The source file contains a row with invalid data, so one row is rejected. The code above specifies a maximum of **5** errors, so a single error should not have prevented the valid rows from being loaded. You can view the rows that *have* been loaded by running the following query.
+6. Run the script and review the resulting message in **Messages** tab. The source file contains a row with invalid data, so one row is rejected. The code above specifies a maximum of **5** errors, so a single error should not have prevented the valid rows from being loaded. You can view the rows that *have* been loaded by running the following query.
 
     ```sql
     SELECT *
@@ -136,7 +135,7 @@ You now have a blank SQL page, which is connected to the instance for the follow
     ```
 
 7. On the **files** tab, view the root folder of your data lake and verify that a new folder named **_rejectedrows** has been created (if you don't see this folder, in the **More** menu, select **Refresh** to refresh the view).
-8. Open the **_rejectedrows** folder and the date and time specific subfolder it contains, and note that files with names similar to ***QID123_1_2*.Error.Txt** and ***QID123_1_2*.Row.Txt** have been created. You can right-click each of these files and select **Preview** to see details of the error and the row that was rejected.
+8. Open the **_rejectedrows** folder and the date and time specific subfolder it contains, and note that files with names similar to ***QID147_1_1*.Error.Txt** and ***QID147_1_1*.Row.Txt** have been created. You can right-click each of these files and select **Preview** to see details of the error and the row that was rejected.
 
     The use of staging tables enables you to validate or transform data before moving or using it to append to or upsert into any existing dimension tables. The COPY statement provides a simple but high-performance technique that you can use to easily load data from files in a data lake into staging tables, and as you've seen, identify and redirect invalid rows.
 
@@ -223,7 +222,7 @@ The **DimCustomer** table supports type 1 and type 2 slowly changing dimensions 
     AND stg.AddressLine1 <> dim.AddressLine1;
     ```
 
-2. Run the script and review the output.
+2. Run the script to load new data into the data warehouse.
 
 ## Task 4: Perform post-load optimization
 
