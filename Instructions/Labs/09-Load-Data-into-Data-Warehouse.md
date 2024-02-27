@@ -35,14 +35,14 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 3. In the PowerShell pane, enter the following commands to clone this repository:
 
     ```powershell
-    rm -r dp-203 -f
-    git clone https://github.com/MicrosoftLearning/dp-203-azure-data-engineer dp-203
+    rm -r synapse -f
+    git clone https://github.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse synapse
     ```
 
 4. After the repository has been cloned, enter the following commands to change to the folder for this exercise, and run the **setup.ps1** script it contains:
 
     ```powershell
-    cd dp-203/Allfiles/labs/09
+    cd synapse/Allfiles/labs/09
     ./setup.ps1
     ```
 
@@ -55,7 +55,7 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
 ## Task 2: Prepare to load data
 
-1. After the script has completed, in the Azure portal, go to the **dp203-*xxxxxxx*** resource group that it created, and select your Synapse workspace.
+1. After the script has completed, in the Azure portal, go to the **synapse** resource group that it created, and select your Synapse workspace.
 2. In the **Overview page** for your Synapse Workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
 3. On the left side of Synapse Studio, use the ›› icon to expand the menu - revealing the different pages within Synapse Studio that you’ll use to manage resources and perform data analytics tasks.
 4. On the **Manage** page, on the **SQL pools** tab, select the row for the **sql*xxxxxxx*** dedicated SQL pool, which hosts the data warehouse for this exercise, and use its **&#9655;** icon to start it; confirming that you want to resume it when prompted.
