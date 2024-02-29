@@ -56,7 +56,7 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
 ## Task 2: Modify container permissions
 
-1. After the deployment script has completed, in the Azure portal, go to the **analyticsxxxxx** resource group that it created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
+1. After the deployment script has completed, in the Azure portal, go to the **analyticsxxxxx** resource group that is created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
 
 2. Select the **Storage account** named **datalakexxxxxxx** 
 
@@ -100,7 +100,7 @@ Now that you have created a lake database, you can define its schema by creating
 
 2. With **Table_1** selected, in the **General** tab under the database design canvas, change the **Name** property to **Customer**.
 
-3. Expand the **Storage settings for table** section and note that the table will be stored as delimited text in the **files/RetailDB/Customer** folder in the default data lake store for your Synapse workspace.
+3. Scroll down in the **General** tab, expand the **Storage settings for table** section and note that the table will be stored as delimited text in the **files/RetailDB/Customer** folder in the default data lake store for your Synapse workspace.
 4. On the **Columns** tab, note that by default, the table contains one column named **Column_1**. Edit the column definition to match the following properties:
 
     ![Change to Azure AD user account](./images/DP-203(4-1).png)
