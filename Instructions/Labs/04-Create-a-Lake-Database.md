@@ -56,7 +56,7 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
 ## Task 2: Modify container permissions
 
-1. After the deployment script has completed, in the Azure portal, go to the **analytics** resource group that it created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
+1. After the deployment script has completed, in the Azure portal, go to the **analyticsxxxxx** resource group that it created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
 
 2. Select the **Storage account** named **datalakexxxxxxx** 
 
@@ -72,7 +72,7 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
 A lake database is a type of database that you can define in your workspace, and work with using the built-in serverless SQL pool.
 
-1. Go back to the resource group and select your Synapse workspace, and in its **Overview** page, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab, sign in if prompted.
+1. Go back to the **analyticsxxxxx** resource group and select your Synapse workspace, and in its **Overview** page, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab, sign in if prompted.
 
 2. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
 
