@@ -12,7 +12,7 @@ After completing this lab, you will be able to:
 - Load data warehouse tables
 - Perform post-load optimization
 
-### Estimated timing: 45 minutes
+### Estimated timing: 120 minutes
 
 ### Architecture Diagram
 
