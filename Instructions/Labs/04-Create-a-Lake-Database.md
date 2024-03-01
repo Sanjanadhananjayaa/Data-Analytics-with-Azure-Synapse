@@ -14,7 +14,7 @@ After completing this lab, you will be able to:
 - Create a table from existing data
 - Work with lake database tables
 
-### Estimated timing: 45 minutes
+### Estimated timing: 90 minutes
 
 ### Architecture Diagram
 
