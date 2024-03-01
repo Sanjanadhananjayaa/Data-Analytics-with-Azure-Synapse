@@ -272,6 +272,8 @@ Now that you have some tables in your database, you can use them to work with th
 
 5. Use the **+ Code** button to add a new cell to the notebook.
 
+    > **Note**: If the **+ Code** option isn't visible, try hovering your mouse cursor below the results to reveal it.
+
 6. Enter the following code in the new cell:
 
     ```
