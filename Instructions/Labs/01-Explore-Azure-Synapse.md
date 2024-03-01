@@ -300,7 +300,10 @@ While SQL is a common language for querying structured datasets, many data analy
 
     Notice that running the cell again takes less time, because the Spark pool is already started.
 
-8. Under the results, use the **&#65291; Code** icon to add a new code cell to the notebook. Hover under the results if you don't see **&#65291; Code** icon.
+8. Under the results, use the **&#65291; Code** icon to add a new code cell to the notebook.
+
+    > **Note**: If the **+ Code** option isn't visible, try hovering your mouse cursor below the results to reveal it.
+
 9. In the new empty code cell, add the following code:
 
     ```Python
