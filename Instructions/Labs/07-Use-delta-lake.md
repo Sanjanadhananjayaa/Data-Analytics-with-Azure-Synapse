@@ -13,7 +13,7 @@ After completing this lab, you will be able to:
 - Use delta tables for streaming data
 - Query a delta table from a serverless SQL pool
 
-### Estimated timing: 45 minutes
+### Estimated timing: 90 minutes
 
 ### Architecture Diagram
 
