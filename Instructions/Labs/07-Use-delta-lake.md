@@ -108,6 +108,8 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
     df.write.format("delta").save(delta_table_path)
     ```
 
+    > **Note**: If the **+ Code** option isn't visible, try hovering your mouse cursor below the results to reveal it.
+
 2. On the **files** tab, use the **&#8593;** icon in the toolbar to return to the root of the **files** container, and note that a new folder named **delta** has been created. Open this folder and the **products-delta** table it contains, where you should see the parquet format file(s) containing the data.
 
 3. Return to the **Notebook 1** tab and add another new code cell. Then, in the new cell, add the following code and run it:
