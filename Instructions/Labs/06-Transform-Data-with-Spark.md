@@ -108,8 +108,7 @@ In this task, you'll use a combination of a PowerShell script and an ARM templat
     > **Note**: The first code cell will take a few minutes to run because the Spark pool must be started. Subsequent cells will run more quickly.
 
 
-  <validation step="29d3bdbe-a709-4d66-8667-d5b765e92d45" />
-
+<validation step="29d3bdbe-a709-4d66-8667-d5b765e92d45" />
 
   **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
 
