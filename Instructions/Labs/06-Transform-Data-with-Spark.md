@@ -96,23 +96,23 @@ In this task, you'll use a combination of a PowerShell script and an ARM templat
 
 12. Select the file you just downloaded and saved as **Spark Transfrom.ipynb**.
 
-13. Go to your storage account and click on IAM and click on add role assignment.
+13. Go to your storage account, click on **Access Control (IAM)**  and click on add role assignment. Search for **Storage Blob Data Contributor** Role under job function roles. 
 
     ![Spark Notebook import](./image/../images/Str_01.png)
 
-14. Select the role Blob contributor as shown in the screenshot and click on Next.
+15. Select the role Blob contributor as shown in the screenshot and click on Next. under members click on **Select members**.
 
     ![Spark Notebook import](./image/../images/Str_02.png)
 
-15. Provide the odl user name, click on it and click on select. click on **Next** twice and click on **Review nad Create**.
+16. Provide the odl user name, click on it and click on select. click on **Next** twice and click on **Review + assign**.
 
     ![Spark Notebook import](./image/../images/Str_03.png)
 
-16. Attach the notebook to your **sparkxxxxxxx** Spark pool.
+17. Go back to your notebook, attach the notebook to your **sparkxxxxxxx** Spark pool.
 
     >**Note**: If you don't find the **Attach to** option, kindly collapse the **Develop** pane to view the **Attach to** option next to the outline option.
 
-17. Review the notes in the notebook and run the each code cells.
+18. Review the notes in the notebook and run the each code cells.
 
     > **Note**: The first code cell will take a few minutes to run because the Spark pool must be started. Subsequent cells will run more quickly.
 
