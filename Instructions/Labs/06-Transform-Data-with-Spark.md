@@ -40,9 +40,7 @@ In this task, you'll use a combination of a PowerShell script and an ARM templat
 
 4. Select i want to create a storage, click on **Next**. provide all the details, give unique storage account name and in file share section write **None**. Click on **Create**.
 
-
     ![Azure portal with a cloud shell pane](./images/cloudshell_image2.png)
-
 
     ![Azure portal with a cloud shell pane](./images/cloudshell_image3.png)
 
