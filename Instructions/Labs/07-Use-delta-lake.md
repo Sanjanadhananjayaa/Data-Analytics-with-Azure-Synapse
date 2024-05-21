@@ -393,7 +393,7 @@ Delta lake supports streaming data. Delta tables can be a *sink* or a *source* f
 In addition to Spark pools, Azure Synapse Analytics includes a built-in serverless SQL pool. You can use the relational database engine in this pool to query delta tables using SQL.
 
 1. In the **files** tab, browse to the **files/delta** folder.
-2. Select the **products-delta** folder, and on the toolbar, in the **New SQL script** drop-down list, select **Select TOP 100 rows**.
+2. Select and right click the **products-delta** folder, in the **New SQL script** drop-down list, select **Select TOP 100 rows**.
 3. In the **Select TOP 100 rows** pane, in the **File type** list, select **Delta format** and then select **Apply**.
 4. Review the SQL code that is generated, which should look like this:
 
