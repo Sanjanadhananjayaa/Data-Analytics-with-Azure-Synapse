@@ -33,7 +33,7 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 2. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
 
-3. If You dont have precreated storage account, select mount storage account.
+3. If You dont have precreated storage account, select mount storage account and subscription.
 
     ![Azure portal with a cloud shell pane](./images/cloudshell_image1.png)
 
