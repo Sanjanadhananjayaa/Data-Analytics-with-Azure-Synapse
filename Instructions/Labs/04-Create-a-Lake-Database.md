@@ -8,11 +8,11 @@ Azure Synapse Analytics enables you to combine the flexibility of file storage i
   
 After completing this lab, you will be able to:
 
-- Modify container permissions in the Stroage account
-- Create a lake database in Synapse Studio
-- Create a table from a database template
-- Create a table from existing data
-- Work with lake database tables
++ Task 1: Modify container permissions in the Stroage account.
++ Task 2: Create a lake database in Synapse Studio.
++ Task 3: Create a table from a database template.
++ Task 4: Create a table from existing data.
++ Task 5: Work with lake database tables.
 
 ### Estimated timing: 90 minutes
 
