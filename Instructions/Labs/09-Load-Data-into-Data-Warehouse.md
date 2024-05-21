@@ -8,9 +8,9 @@ In this exercise, you're going to load data into a dedicated SQL Pool. Also you 
 
 After completing this lab, you will be able to:
 
-- Prepare to load data
-- Load data warehouse tables
-- Perform post-load optimization
++ Task 1: Prepare to load data.
++ Task 2: Load data warehouse tables.
++ Task 3: Perform post-load optimization.
 
 ### Estimated timing: 120 minutes
 
