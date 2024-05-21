@@ -68,7 +68,7 @@ In this task, you'll use a combination of a PowerShell script and an ARM templat
 
 ## Task 2: Use a Spark notebook to transform data
 
-1. After the deployment script has completed, in the Azure portal, go to the **data** resource group that it created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
+1. After the deployment script has completed, in the Azure portal, go to the **data-XXXX** resource group that it created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
 
 2. Select your Synapse workspace, and in its **Overview** page, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab, sign in if prompted.
 
