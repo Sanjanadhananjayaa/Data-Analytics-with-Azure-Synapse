@@ -25,34 +25,40 @@ You'll need an Azure Synapse Analytics workspace with access to data lake storag
 
 In this exercise, you'll use a combination of a PowerShell script and an ARM template to provision an Azure Synapse Analytics workspace.
 
-1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment and click on **Create storage** if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment and click on **Create storage** if prompted. The Cloud Shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
 
-    ![Azure portal with a cloud shell pane](./images/cloud-shell.png)
+    ![Azure portal with a cloud shell pane](./images/Storage_imagenew.png)
 
     > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, use the the drop-down menu at the top left of the cloud shell pane to change it to ***PowerShell***.
+    
+2. Select the mount storage account and create storage account as shown in the below screenshot
 
-2. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+   ![Azure portal with a cloud shell pane](./images/Storage_imagenew_1.png)
 
-3. In the PowerShell pane, enter the following commands to clone this repo:
+   ![Azure portal with a cloud shell pane](./images/Storage_imagenew_2.png)
+   
+3. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+
+4. In the PowerShell pane, enter the following commands to clone this repo:
 
     ```
     rm -r synapse -f
     git clone https://github.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse synapse
     ```
 
-4. After the repo has been cloned, enter the following commands to change to the folder for this exercise and run the **setup.ps1** script it contains:
+5. After the repo has been cloned, enter the following commands to change to the folder for this exercise and run the **setup.ps1** script it contains:
 
     ```
     cd synapse/Allfiles/labs/07
     ./setup.ps1
     ```
 
-5. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
-6. When prompted, enter a suitable password to be set for your Azure Synapse SQL pool.
+6. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
+7. When prompted, enter a suitable password to be set for your Azure Synapse SQL pool.
 
     > **Note**: Be sure to remember this password!
 
-7. Wait for the script to complete - this typically takes around 10 minutes, but in some cases may take longer. While you are waiting, review the [What is Delta Lake](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake) article in the Azure Synapse Analytics documentation.
+8. Wait for the script to complete - this typically takes around 10 minutes, but in some cases may take longer. While you are waiting, review the [What is Delta Lake](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-what-is-delta-lake) article in the Azure Synapse Analytics documentation.
 
 ## Task 2: Create delta tables
 
@@ -421,6 +427,9 @@ In addition to Spark pools, Azure Synapse Analytics includes a built-in serverle
     ```
 
 7. Run the code and observe that you can also use the serverless SQL pool to query Delta Lake data in catalog tables that are defined the Spark metastore.
+
+   <validation step="61bfb30e-1ad6-4205-97ae-935789802c65" />   
+
 
   **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
 
