@@ -299,8 +299,6 @@ Now that you have some tables in your database, you can use them to work with th
 
    <validation step="c7c2a4b7-1b09-4a42-a89c-255c051ca4e4" />
 
-   <validation step="29d3bdbe-a709-4d66-8667-d5b765e92d45" />
-
   **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
 
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
