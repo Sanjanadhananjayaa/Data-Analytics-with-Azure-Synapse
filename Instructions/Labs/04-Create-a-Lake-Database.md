@@ -32,27 +32,40 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
 2. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
-3. In the PowerShell pane, enter the following commands to clone this repo:
+
+3. If You dont have precreated storage account, select mount storage account.
+
+    ![Azure portal with a cloud shell pane](./images/cloudshell_image1.png)
+
+4. Select i want to create a storage, click on **Next**. provide all the details, give unique storage account name and in file share section write **None**. Click on **Create**.
+
+
+    ![Azure portal with a cloud shell pane](./images/cloudshell_image2.png)
+
+
+    ![Azure portal with a cloud shell pane](./images/cloudshell_image3.png)
+
+5. In the PowerShell pane, enter the following commands to clone this repo:
 
     ```
     rm -r synapse -f
     git clone https://github.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse synapse
     ```
 
-4. After the repo has been cloned, enter the following commands to change to the folder for this exercise and run the **setup.ps1** script it contains:
+6. After the repo has been cloned, enter the following commands to change to the folder for this exercise and run the **setup.ps1** script it contains:
 
     ```
     cd synapse/Allfiles/labs/04
     ./setup.ps1
     ```
 
-5. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
+7. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
 
-6. When prompted, enter a suitable password to be set for your Azure Synapse SQL pool.
+8. When prompted, enter a suitable password to be set for your Azure Synapse SQL pool.
 
     > **Note**: Be sure to remember this password!
 
-7. Wait for the script to complete - this typically takes around 10 minutes, but in some cases may take longer. While you are waiting, review the [Lake database](https://docs.microsoft.com/azure/synapse-analytics/database-designer/concepts-lake-database) and [Lake database templates](https://docs.microsoft.com/azure/synapse-analytics/database-designer/concepts-database-templates) articles in the Azure Synapse Analytics documentation.
+9. Wait for the script to complete - this typically takes around 10 minutes, but in some cases may take longer. While you are waiting, review the [Lake database](https://docs.microsoft.com/azure/synapse-analytics/database-designer/concepts-lake-database) and [Lake database templates](https://docs.microsoft.com/azure/synapse-analytics/database-designer/concepts-database-templates) articles in the Azure Synapse Analytics documentation.
 
 ## Task 2: Modify container permissions
 
@@ -283,6 +296,10 @@ Now that you have some tables in your database, you can use them to work with th
 7. Use the **&#9655;** button on the left of the cell to run it and verify that a row for sales order 99999 was inserted into the **SalesOrder** table.
 
 8. Close the **Notebook 1** pane, stopping the Spark session and discarding your changes.
+
+   <validation step="c7c2a4b7-1b09-4a42-a89c-255c051ca4e4" />
+
+   <validation step="29d3bdbe-a709-4d66-8667-d5b765e92d45" />
 
   **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
 
