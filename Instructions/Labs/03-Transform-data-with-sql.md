@@ -8,9 +8,9 @@ Data *analysts* often use SQL to query data for analysis and reporting. Data *en
   
 After completing this lab, you will be able to:
 
-- Query the data in files
-- Transform data using CREATE EXTERAL TABLE AS SELECT (CETAS) statements
-- Encapsulate data transformation in a stored procedure
++ Task 1: Query the data in files.
++ Task 2: Transform data using CREATE EXTERAL TABLE AS SELECT (CETAS) statements.
++ Task 3: Encapsulate data transformation in a stored procedure.
 
 ### Estimated timing: 45 minutes
 
