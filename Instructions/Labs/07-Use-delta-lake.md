@@ -36,6 +36,8 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
    ![Azure portal with a cloud shell pane](./images/Storage_imagenew_1.png)
 
    ![Azure portal with a cloud shell pane](./images/Storage_imagenew_2.png)
+
+    > **Note**: If you have storage account already configured for the Azure CLI then please start performing the lab from the step 4.
    
 3. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
