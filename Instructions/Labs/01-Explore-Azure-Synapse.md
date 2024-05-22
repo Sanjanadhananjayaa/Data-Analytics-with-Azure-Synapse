@@ -157,6 +157,8 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
 
 2. Right-click the **products.csv** data file and select **Preview** to view the ingested data. Then close the preview.
 
+   <validation step="839cbf4c-f048-4b81-bb5f-a2d033dc3e26" />
+
   **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
