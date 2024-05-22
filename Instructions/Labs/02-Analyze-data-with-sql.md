@@ -8,9 +8,9 @@ SQL is probably the most used language for working with data in the world. Most 
   
 After completing this lab, you will be able to:
 
-- Query the data in files
-- Access external data in a database
-- Visualize the query results
++ Task 1: Query the data in files.
++ Task 2: Access external data in a database.
++ Task 3: Visualize the query results.
 
 ### Estimated timing: 45 minutes
 
@@ -29,31 +29,39 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
     ![Azure portal with a cloud shell pane](./images/cloud-shell.png)
 
 
-2. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+2. If you dont have storage account then, click on mount storage account and click on **Next**
 
-3. In the PowerShell pane, manually enter the following commands to clone this repo:
+   ![Azure portal with a cloud shell pane](./images/storagenew_1.png)
+
+3. Select we will create a storage account for you option and click on Next. wait for the deployment to finish, once the deployment completed you will see the powershell is active to get the inputs from you.
+
+   ![Azure portal with a cloud shell pane](./images/storagenew_2.png)
+
+4. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+
+5. In the PowerShell pane, manually enter the following commands to clone this repo:
 
     ```
     rm -r synapse -f
     git clone https://github.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse synapse
     ```
 
-4. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.ps1** script it contains:
+6. After the repo has been cloned, enter the following commands to change to the folder for this lab and run the **setup.ps1** script it contains:
 
     ```
     cd synapse/Allfiles/labs/00
     ./setup.ps1
     ```
 
-5. If prompted, provided resource group already exists. Are you sure want to update it. Enter **Y** and press enter.
+7. If prompted, provided resource group already exists. Are you sure want to update it. Enter **Y** and press enter.
 
-6. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
+8. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
 
-7. When prompted, enter a suitable password to be set for your Azure Synapse SQL pool.
+9. When prompted, enter a suitable password to be set for your Azure Synapse SQL pool.
 
     > **Note**: Be sure to remember this password!
 
-7. Wait for the script to complete - this typically takes around 10 minutes, but in some cases may take longer. While you are waiting, review the [Serverless SQL pool in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) article in the Azure Synapse Analytics documentation.
+10. Wait for the script to complete - this typically takes around 10 minutes, but in some cases may take longer. While you are waiting, review the [Serverless SQL pool in Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview) article in the Azure Synapse Analytics documentation.
 
 ## Task 2: Query data in files
 
