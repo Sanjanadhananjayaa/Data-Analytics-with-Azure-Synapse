@@ -125,8 +125,8 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
     - **Destination type**: Azure Data Lake Storage Gen 2
     - **Connection**: *Select the existing connection to your data lake store (this was created for you when you created the workspace).*
 8. After selecting the connection, on the **Destination/Dataset** step, ensure the following settings are selected, and then select **Next >**:
-    - **Folder path**: files/product_data
-    - **File name**: products.csv
+    - **Folder path**: files/sales_data
+    - **File name**: sales.csv
     - **Copy behavior**: None
     - **Max concurrent connections**: *Leave blank*
     - **Block size (MB)**: *Leave blank*
