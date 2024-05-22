@@ -389,7 +389,7 @@ The external data source makes it easier to access the files in the data lake, b
 
 Now that you've explored various ways to query files in the data lake by using SQL queries, you can analyze the results of these queries to gain insights into the data. Often, insights are easier to uncover by visualizing the query results in a chart; which you can easily do by using the integrated charting functionality in the Synapse Studio query editor.
 
-1. On the **Develop** page, create a new empty SQL query by selecting **+ > SQL Script**.
+1. In Synapse Studio, on the **Data** page, Sales (SQL) database in the **...** menu, select **SQL script** and hit on empty script.
 
 2. Ensure that the script is connected to the **Built-in** SQL pool and the **Sales** database.
 
