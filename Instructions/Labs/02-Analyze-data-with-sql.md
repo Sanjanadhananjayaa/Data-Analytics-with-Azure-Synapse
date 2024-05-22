@@ -405,6 +405,8 @@ Now that you've explored various ways to query files in the data lake by using S
 
 7. Experiment with the charting functionality in the query editor. It offers some basic charting capabilities that you can use while interactively exploring data, and you can save charts as images to include in reports. However, functionality is limited compared to enterprise data visualization tools such as Microsoft Power BI.
 
+   <validation step="1d10d0ee-5647-48b0-9de8-6c71a9ca1ac5" />
+
   **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
 
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
