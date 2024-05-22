@@ -33,6 +33,8 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
    ![Azure portal with a cloud shell pane](./images/storagenew_1.png)
 
+    > **Note**: If you have storage account already configured for the Azure CLI then please start performing the lab from the step 5.
+
 3. Select we will create a storage account for you option and click on Next. wait for the deployment to finish, once the deployment completed you will see the powershell is active to get the inputs from you.
 
    ![Azure portal with a cloud shell pane](./images/storagenew_2.png)
