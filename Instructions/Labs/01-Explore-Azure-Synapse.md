@@ -127,7 +127,7 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
 8. After selecting the connection, on the **Destination/Dataset** step, ensure the following settings are selected, and then select **Next >**:
     - **Folder path**: files/sales_data
     - **File name**: sales.csv
-    - **Copy behavior**: None
+    - **Copy behavior**: *Leave blank*
     - **Max concurrent connections**: *Leave blank*
     - **Block size (MB)**: *Leave blank*
 9. On the **Destination** step, in the **Configuration** substep, on the **File format settings** page, ensure that the following properties are selected. Then select **Next >**:
@@ -135,7 +135,7 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
     - **Column delimiter**: Comma (,)
     - **Row delimiter**: Line feed (\n)
     - **Add header to file**: Selected
-    - **Compression type**: None
+    - **Compression type**: *Leave blank*
     - **Max rows per file**: *Leave blank*
     - **File name prefix**: *Leave blank*
 10. On the **Settings** step, enter the following settings and then click **Next >**:
@@ -151,11 +151,11 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
 
 ### Task 3.2: View the ingested data
 
-1. On the **Data** page, select the **Linked** tab and expand the **Azure Data Lake Storage Gen2** and then expand **synapse*xxxxxxx* (Primary) datalake** container hierarchy until you see the **files** file storage for your Synapse workspace. Then select the file storage to verify that a folder named **product_data** containing a file named **products.csv** has been copied to this location, as shown here:
+1. On the **Data** page, select the **Linked** tab and expand the **Azure Data Lake Storage Gen2** and then expand **synapse*xxxxxxx* (Primary) datalake** container hierarchy until you see the **files** file storage for your Synapse workspace. Then select the file storage to verify that a folder named **sales_data** containing a file named **sales.csv** has been copied to this location, as shown here:
 
     ![Image showing Synapse Studio expanded Azure Data Lake Storage hierarchy with the file storage for your Synapse workspace](./images/product_files.png)
 
-2. Right-click the **products.csv** data file and select **Preview** to view the ingested data. Then close the preview.
+2. Right-click the **sales.csv** data file and select **Preview** to view the ingested data. Then close the preview.
 
    <validation step="839cbf4c-f048-4b81-bb5f-a2d033dc3e26" />
 
@@ -170,7 +170,7 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
 
 Now that you've ingested some data into your workspace, you can use Synapse Analytics to query and analyze it. One of the most common ways to query data is to use SQL, and in Synapse Analytics you can use a serverless SQL pool to run SQL code against data in a data lake.
 
-1. In Synapse Studio, right-click the **products.csv** file in the file storage for your Synapse workspace, point to **New SQL script**, and select **Select TOP 100 rows**.
+1. In Synapse Studio, right-click the **sales.csv** file in the file storage for your Synapse workspace, point to **New SQL script**, and select **Select TOP 100 rows**.
 2. In the **SQL Script 1** pane that opens, review the SQL code that has been generated, which should be similar to this:
 
     ```SQL
@@ -179,7 +179,7 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
         TOP 100 *
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/product_data/products.csv',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales_data/sales.csv',
             FORMAT = 'CSV',
             PARSER_VERSION='2.0'
         ) AS [result]
@@ -204,7 +204,7 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
         TOP 100 *
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/product_data/products.csv',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales_data/sales.csv',
             FORMAT = 'CSV',
             PARSER_VERSION='2.0',
             HEADER_ROW = TRUE
@@ -226,7 +226,7 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
         Category, COUNT(*) AS ProductCount
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/product_data/products.csv',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales_data/sales.csv',
             FORMAT = 'CSV',
             PARSER_VERSION='2.0',
             HEADER_ROW = TRUE
@@ -268,13 +268,13 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
 
 While SQL is a common language for querying structured datasets, many data analysts find languages like Python useful to explore and prepare data for analysis. In Azure Synapse Analytics, you can run Python (and other) code in a *Spark pool*; which uses a distributed data processing engine based on Apache Spark.
 
-1. In Synapse Studio, if the **files** tab you opened earlier containing the **products.csv** file is no longer open, on the **Data** page, browse **product_data** folder. Then right-click **products.csv**, point to **New notebook**, and select **Load to DataFrame**.
+1. In Synapse Studio, if the **files** tab you opened earlier containing the **sales.csv** file is no longer open, on the **Data** page, browse **sales_data** folder. Then right-click **sales.csv**, point to **New notebook**, and select **Load to DataFrame**.
 2. In the **Notebook 1** pane that opens, in the **Attach to** list, select the **sparkxxxxxxx** Spark pool and ensure that the **Language** is set to **PySpark (Python)**.
 3. Review the code in the first (and only) cell in the notebook, which should look like this:
 
     ```Python
     %%pyspark
-    df = spark.read.load('abfss://files@datalakexxxxxxx.dfs.core.windows.net/product_data/products.csv', format='csv'
+    df = spark.read.load('abfss://files@datalakexxxxxxx.dfs.core.windows.net/sales_data/sales.csv', format='csv'
     ## If header exists uncomment line below
     ##, header=True
     )
@@ -291,11 +291,11 @@ While SQL is a common language for querying structured datasets, many data analy
     | 772 | Mountain-100 Silver, 42 | Mountain Bikes | 3399.9900 |
     | ... | ... | ... | ... |
 
-6. Uncomment the *,header=True* line (because the products.csv file has the column headers in the first line), so your code looks like this:
+6. Uncomment the *,header=True* line (because the sales.csv file has the column headers in the first line), so your code looks like this:
 
     ```Python
     %%pyspark
-    df = spark.read.load('abfss://files@datalakexxxxxxx.dfs.core.windows.net/product_data/products.csv', format='csv'
+    df = spark.read.load('abfss://files@datalakexxxxxxx.dfs.core.windows.net/sales_data/sales.csv', format='csv'
     ## If header exists uncomment line below
     , header=True
     )
@@ -335,7 +335,7 @@ While SQL is a common language for querying structured datasets, many data analy
 
     ![Image showing category count chart view](./images/bar-chart.png)
 
-12. If it is not already visible, show the **Properties** page by selecting the **Properties** button (which looks similar to **&#128463;<sub>*</sub>**) on the right end of the toolbar. Then in the **Properties** pane, change the notebook name to **Explore products** and use the **Publish** button on the toolbar to save it.
+12. If it is not already visible, show the **Properties** page by selecting the **Properties** button (which looks similar to **&#128463;<sub>*</sub>**) on the right end of the toolbar. Then in the **Properties** pane, change the notebook name to **Explore sales** and use the **Publish** button on the toolbar to save it.
 
 13. Close the notebook pane and stop the Spark session when prompted. Then view the **Develop** page to verify that the notebook has been saved.
 
