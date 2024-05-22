@@ -171,7 +171,7 @@ By defining an external data source in a database, you can use it to reference t
     GO;
     ```
 
-3. Modify the script properties to change its name to **Create Sales DB**, and publish it.
+3. Modify the script properties to change its name to **Create Sales DB**, click on **Run** and publish it.
    
 4. Ensure that the script is connected to the **Built-in** SQL pool and the **master** database, and then run it.
    
