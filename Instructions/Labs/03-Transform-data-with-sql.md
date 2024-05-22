@@ -301,6 +301,7 @@ If you will need to transform data frequently, you can use a stored procedure to
     
 10. Switch back to the SQL script and re-run the `EXEC sp_GetYearlySales;` statement. This time, the operation succeeds and a new data file is generated.
 
+  <validation step="24a2fe45-1282-4894-a6b8-35bbfc5f23eb" />
 
   **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
 
