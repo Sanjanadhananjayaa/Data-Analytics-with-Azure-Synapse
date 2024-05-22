@@ -8,12 +8,12 @@ Azure Synapse Analytics provides a single, consolidated data analytics platform 
   
 After completing this lab, you will be able to:
 
-- Provision an Azure Synapse Analytics workspace
-- Explore Synapse Studio
-- Ingesting data with a pipeline in Synapse Studio
-- Analyze data using a serverless SQL pool
-- Analyze data using the Spark pool
-- Query a data warehouse using a dedicated SQL pool
++ Task 1: Provision an Azure Synapse Analytics workspace.
++ Task 2: Explore Synapse Studio.
++ Task 3: Ingesting data with a pipeline in Synapse Studio.
++ Task 4: Analyze data using a serverless SQL pool.
++ Task 5: Analyze data using the Spark pool.
++ Task 6: Query a data warehouse using a dedicated SQL pool.
 
 ### Estimated timing: 60 minutes
 
