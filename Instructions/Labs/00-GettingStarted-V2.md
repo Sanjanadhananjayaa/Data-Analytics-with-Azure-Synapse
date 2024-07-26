@@ -62,6 +62,11 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
       ![Enter Your Password](../Labs/images/sc900-image-2.png)
+
+1. If you see the pop-up **Action Required**, click **Ask Later**.
+
+   ![Launch Azure Portal](../Labs/images/action.png)
+     
  
 4. If prompted to stay signed in, you can click "No."
  
