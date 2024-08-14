@@ -436,6 +436,10 @@ Now that you've explored various ways to query files in the data lake by using S
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
+## Summary
+
+In this lab, you have explored how to query data effectively from various files, enabling you to extract meaningful insights. Additionally, you have learned to visualize this data, transforming raw information into intuitive visual representations that aid in decision-making. Furthermore, you integrated external data sources into your database.
+
 ## Review
 
 In this lab, you have accomplished the following:
