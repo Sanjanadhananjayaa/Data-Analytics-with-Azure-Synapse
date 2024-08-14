@@ -8,10 +8,11 @@ In this exercise, you're going to load data into a dedicated SQL Pool. Also you 
 
 After completing this lab, you will be able to:
 
-+ Task 1: Prepare to load data.
-+ Task 2: Load data warehouse tables.
-+ Task 3: Perform post-load optimization.
-+ Task 4: Perform post-load optimization
++ Task 1: Provision an Azure Synapse Analytics workspace
++ Task 2: Prepare to load data.
++ Task 3: Load data warehouse tables.
++ Task 4: Perform post-load optimization.
+
 
 ### Estimated timing: 120 minutes
 

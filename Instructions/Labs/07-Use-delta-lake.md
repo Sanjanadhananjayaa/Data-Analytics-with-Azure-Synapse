@@ -8,10 +8,11 @@ Delta Lake is an open source project to build a transactional data storage layer
   
 After completing this lab, you will be able to:
 
-+ Task 1: Create delta tables.
-+ Task 2: Create catalog tables.
-+ Task 3: Use delta tables for streaming data.
-+ Task 4: Query a delta table from a serverless SQL pool.
++ Task 1: Provision an Azure Synapse Analytics workspace
++ Task 2: Create delta tables.
++ Task 3: Create catalog tables.
++ Task 4: Use delta tables for streaming data.
++ Task 5: Query a delta table from a serverless SQL pool.
 
 ### Estimated timing: 90 minutes
 
@@ -455,6 +456,8 @@ In this lab, we provisioned an Azure Synapse Analytics workspace and explored De
 ## Review
 
 In this lab, you have accomplished the following:
+
+- Provision an Azure Synapse Analytics workspace
 - Create delta tables
 - Create catalog tables
 - Use delta tables for streaming data
