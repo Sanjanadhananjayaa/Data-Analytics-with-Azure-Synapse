@@ -328,6 +328,10 @@ If you will need to transform data frequently, you can use a stored procedure to
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
+## Summary
+
+In this lab, you have efficiently queried data from various files, transforming it using CREATE EXTERNAL TABLE AS SELECT (CETAS) statements to streamline data loading into external tables. Additionally, you encapsulated the data transformation process within stored procedures, enhancing reusability and maintainability of your data workflows. This hands-on experience has equipped you with the skills to manage and transform data effectively within a database environment.
+
 ## Review
 
 In this lab, you have accomplished the following:
