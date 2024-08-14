@@ -73,16 +73,24 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 1. After the script has completed, in the Azure portal, go to the **analytics** resource group that it created, and select your Synapse workspace.
    
 2. In the **Overview** page for your Synapse workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
+
+   ![](./images/labimg7.png)
    
 3. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
    
-4. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapse*xxxxxxx* (Primary - datalake*xxxxxxx*)**.
+4. On the **Data** **(1)** page, view the **Linked** **(2)** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapse*xxxxxxx* (Primary - datalake*xxxxxxx*)**.
+
+   ![](./images/labimg3.png)
    
 5. Expand your storage account and verify that it contains a file system container named **files**.
    
 6. Select the **files** container, and note that it contains a folder named **sales**. This folder contains the data files you are going to query.
+
+   ![](./images/lamimg4.png)
    
 7. Open the **sales** folder and the **csv** folder it contains, and observe that this folder contains .csv files for three years of sales data.
+
+   ![](./images/labimg5.png)
    
 8. Right-click any of the files and select **Preview** to see the data it contains. Note that the files contain a header row.
    
@@ -319,6 +327,10 @@ If you will need to transform data frequently, you can use a stored procedure to
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+## Summary
+
+In this lab, you have efficiently queried data from various files, transforming it using CREATE EXTERNAL TABLE AS SELECT (CETAS) statements to streamline data loading into external tables. Additionally, you encapsulated the data transformation process within stored procedures, enhancing reusability and maintainability of your data workflows. This hands-on experience has equipped you with the skills to manage and transform data effectively within a database environment.
 
 ## Review
 

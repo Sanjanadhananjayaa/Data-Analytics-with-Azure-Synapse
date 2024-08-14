@@ -73,23 +73,35 @@ The script provisions an Azure Synapse Analytics workspace and an Azure Storage 
 
 1. After the script has completed, in the Azure portal, go to the **synapse** resource group that it created, and select your Synapse workspace.
 
+   ![](./images/labimg1.png)
+
 2. In the **Overview** page for your Synapse workspace, in the **Open Synapse Studio** card, select **Open** to Open Synapse Studio in a new browser tab, sign in if prompted.
+
+   ![](./images/labimg2.png)
 
 3. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
 
-4. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapse*xxxxxxx* (Primary - datalake*xxxxxxx*)**.
+4. On the **Data** **(1)** page, view the **Linked** **(2)** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapse*xxxxxxx* (Primary - datalake*xxxxxxx*)**.
+
+   ![](./images/labimg3.png)
 
 5. Expand your storage account and verify that it contains a file system container named **files**.
 
 6. Select the **files** container, and note that it contains a folder named **sales**. This folder contains the data files you are going to query.
 
+   ![](./images/lamimg4.png)
+
 7. Open the **sales** folder and the **csv** folder it contains, and observe that this folder contains .csv files for three years of sales data.
+
+   ![](./images/labimg5.png)
 
 8. Right-click any of the files and select **Preview** to see the data it contains. Note that the files do not contain a header row, so you can unselect the option to display column headers. Close the preview.
 
 9. Close the preview, and then use the **&#8593;** button to navigate back to the **sales** folder.
 
 10. In the **sales** folder, open the **json** folder and observe that it contains some sample sales orders in .json files. Preview any of these files to see the JSON format used for a sales order.
+
+    ![](./images/labimg6.png)
 
 11. Close the preview, and then use the **&#8593;** button to navigate back to the **sales** folder.
 
@@ -423,6 +435,10 @@ Now that you've explored various ways to query files in the data lake by using S
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+## Summary
+
+In this lab, you have explored how to query data effectively from various files, enabling you to extract meaningful insights. Additionally, you have learned to visualize this data, transforming raw information into intuitive visual representations that aid in decision-making. Furthermore, you integrated external data sources into your database.
 
 ## Review
 
