@@ -8,10 +8,11 @@ Delta Lake is an open source project to build a transactional data storage layer
   
 After completing this lab, you will be able to:
 
-+ Task 1: Create delta tables.
-+ Task 2: Create catalog tables.
-+ Task 3: Use delta tables for streaming data.
-+ Task 4: Query a delta table from a serverless SQL pool.
++ Task 1: Provision an Azure Synapse Analytics workspace
++ Task 2: Create delta tables.
++ Task 3: Create catalog tables.
++ Task 4: Use delta tables for streaming data.
++ Task 5: Query a delta table from a serverless SQL pool.
 
 ### Estimated timing: 90 minutes
 
@@ -23,7 +24,7 @@ After completing this lab, you will be able to:
 
 You'll need an Azure Synapse Analytics workspace with access to data lake storage and an Apache Spark pool that you can use to query and process files in the data lake.
 
-In this exercise, you'll use a combination of a PowerShell script and an ARM template to provision an Azure Synapse Analytics workspace.
+In this task, we will provision an Azure Synapse Analytics workspace using a PowerShell script and an ARM template. This will involve setting up a Cloud Shell, cloning a repository, and running a setup script to create the required resources for working with Delta Lake.
 
 1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment and click on **Create storage** if prompted. The Cloud Shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
 
@@ -33,9 +34,9 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
     
 2. Select the mount storage account and create storage account as shown in the below screenshot
 
-   ![Azure portal with a cloud shell pane](./images/Storage_imagenew_1.png)
+   ![Azure portal with a cloud shell pane](./images/storagenew_1.png)
 
-   ![Azure portal with a cloud shell pane](./images/Storage_imagenew_2.png)
+   ![Azure portal with a cloud shell pane](./images/storagenew_2.png)
 
     > **Note**: If you have storage account already configured for the Azure CLI then please start performing the lab from the step 4.
    
@@ -65,6 +66,8 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 ## Task 2: Create delta tables
 
 The script provisions an Azure Synapse Analytics workspace and an Azure Storage account to host the data lake, then uploads a data file to the data lake.
+
+In this task, we will create delta tables by first exploring data in the data lake and then loading it into a delta table. We will update the data and use features like time travel to view historical data, and examine the Delta Lake table's history.
 
 ### Task 2.1: Explore the data in the data lake
 
@@ -173,6 +176,8 @@ So far you've worked with delta tables by loading data from the folder containin
 - *External* tables that are defined by the path to the parquet files containing the table data.
 - *Managed* tables, that are defined in the Hive metastore for the Spark pool.
 
+In this task, we will create catalog tables. We will create an external table and a managed table in Spark, compare them, and drop them to observe the difference between external and managed tables. We will also create a new table using SQL based on the Delta Lake data.
+
 ### Task 3.1: Create an external table
 
 1. In a new code cell, add and run the following code:
@@ -279,6 +284,8 @@ So far you've worked with delta tables by loading data from the folder containin
 ## Task 4: Use delta tables for streaming data
 
 Delta lake supports streaming data. Delta tables can be a *sink* or a *source* for data streams created using the Spark Structured Streaming API. In this example, you'll use a delta table as a sink for some streaming data in a simulated internet of things (IoT) scenario.
+
+In this task, we will use delta tables for streaming data. We will create a stream to simulate IoT data, write it to a delta table, and query it. We will add more data to the stream and observe the updates in the delta table.
 
 1. Return to the **Notebook 1** tab and add a new code cell. Then, in the new cell, add the following code and run it:
 
@@ -394,6 +401,8 @@ Delta lake supports streaming data. Delta tables can be a *sink* or a *source* f
 
 In addition to Spark pools, Azure Synapse Analytics includes a built-in serverless SQL pool. You can use the relational database engine in this pool to query delta tables using SQL.
 
+In this lab, we will query a delta table from a serverless SQL pool. We will use SQL code to query Delta Lake format files and catalog tables, demonstrating the capability to perform SQL queries on data managed by Spark.
+
 1. In the **files** tab, browse to the **files/delta** folder.
 2. Select and right click the **products-delta** folder, in the **New SQL script** drop-down list, select **Select TOP 100 rows**.
 3. In the **Select TOP 100 rows** pane, in the **File type** list, select **Delta format** and then select **Apply**.
@@ -440,9 +449,15 @@ In addition to Spark pools, Azure Synapse Analytics includes a built-in serverle
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
+## Summary
+
+In this lab, we provisioned an Azure Synapse Analytics workspace and explored Delta Lake by creating and managing delta tables. We loaded data into delta tables, used features like time travel and table history, and created catalog tables to compare external and managed tables. We also worked with streaming data, simulating IoT data to demonstrate how delta tables can be used as data sinks. Finally, we queried delta tables from a serverless SQL pool to showcase the integration between Spark and SQL-based analysis.
+
 ## Review
 
 In this lab, you have accomplished the following:
+
+- Provision an Azure Synapse Analytics workspace
 - Create delta tables
 - Create catalog tables
 - Use delta tables for streaming data

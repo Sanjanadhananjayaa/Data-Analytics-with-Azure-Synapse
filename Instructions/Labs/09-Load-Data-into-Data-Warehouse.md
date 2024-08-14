@@ -8,9 +8,11 @@ In this exercise, you're going to load data into a dedicated SQL Pool. Also you 
 
 After completing this lab, you will be able to:
 
-+ Task 1: Prepare to load data.
-+ Task 2: Load data warehouse tables.
-+ Task 3: Perform post-load optimization.
++ Task 1: Provision an Azure Synapse Analytics workspace
++ Task 2: Prepare to load data.
++ Task 3: Load data warehouse tables.
++ Task 4: Perform post-load optimization.
+
 
 ### Estimated timing: 120 minutes
 
@@ -22,7 +24,7 @@ After completing this lab, you will be able to:
 
 You'll need an Azure Synapse Analytics workspace with access to data lake storage and a dedicated SQL pool hosting a data warehouse.
 
-In this exercise, you'll use a combination of a PowerShell script and an ARM template to provision an Azure Synapse Analytics workspace.
+In this task, we will provision an Azure Synapse Analytics workspace using PowerShell and an ARM template, ensuring it includes access to data lake storage and a dedicated SQL pool. Then clone a repository, run a setup script, and verify the completion of provisioning.
 
 1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment and click on **Create storage** if prompted. The Cloud Shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
 
@@ -32,9 +34,9 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
     
 2. Select the mount storage account and create storage account as shown in the below screenshot
 
-   ![Azure portal with a cloud shell pane](./images/Storage_imagenew_1.png)
+   ![Azure portal with a cloud shell pane](./images/storagenew_1.png)
 
-   ![Azure portal with a cloud shell pane](./images/Storage_imagenew_2.png)
+   ![Azure portal with a cloud shell pane](./images/storagenew_2.png)
 
    > **Note**: If you have storage account already configured for the Azure CLI then please start performing the lab from the step 4.
 
@@ -63,9 +65,14 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
 ## Task 2: Prepare to load data
 
+In this task, we will open Synapse Studio, verify the status of the dedicated SQL pool, and inspect the data files in Azure Data Lake Storage. we use SQL scripts to load data from CSV files into staging tables and manage any errors encountered during the loading process.
+
 1. After the script has completed, in the Azure portal, go to the **analytics** resource group that it created, and select your Synapse workspace.
+
 2. In the **Overview page** for your Synapse Workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
+
 3. On the left side of Synapse Studio, use the ›› icon to expand the menu - revealing the different pages within Synapse Studio that you’ll use to manage resources and perform data analytics tasks.
+
 4. On the **Manage** page, on the **SQL pools** tab, select the row for the **sql*xxxxxxx*** dedicated SQL pool, which hosts the data warehouse for this exercise, and use its **&#9655;** icon to start it if its not started; confirming that you want to resume it when prompted.
 
     Resuming the pool can take a few minutes. You can use the **&#8635; Refresh** button to check its status periodically. The status will show as **Online** when it's ready. While you're waiting, proceed with the steps below to view the data files you will load.
@@ -84,7 +91,8 @@ Let's look at some SQL Based approaches to loading data into the Data Warehouse.
 1. On the  **Data** page, select the **workspace** tab.
 2. Expand **SQL Database** and select your **sql*xxxxxxx*** database. Then in its **...** menu, select **New SQL Script** >**Empty Script**.
 
-You now have a blank SQL page, which is connected to the instance for the following exercises. You will use this script to explore several SQL techniques that you can use to load data.
+In this task, you now have a blank SQL page, which is connected to the instance. You will use this script to explore several SQL techniques that you can use to load data.
+
 
 ### Task 3.1: Load data from a data lake by using the COPY statement
 
@@ -261,9 +269,14 @@ After loading new data into the data warehouse, it's recommended to rebuild the 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
+## Summary
+
+In this lab, you provisioned an Azure Synapse Analytics workspace and set up a dedicated SQL pool. You learned to load data into staging tables using SQL scripts and manage errors during the process. You explored data ingestion techniques, including the COPY statement and CTAS operations, and handled slowly changing dimensions. Finally, you optimized the data warehouse by rebuilding indexes and updating statistics.
+
 ## Review
 
 In this lab, you have accomplished the following:
+- Provision an Azure Synapse Analytics workspace
 - Prepare to load data
 - Load data warehouse tables
 - Perform post-load optimization
