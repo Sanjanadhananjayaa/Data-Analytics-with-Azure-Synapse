@@ -86,19 +86,29 @@ A lake database is a type of database that you can define in your workspace, and
 
 1. Go back to the **analyticsxxxxx** resource group and select your Synapse workspace, and in its **Overview** page, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab, sign in if prompted.
 
+   ![](./images/labimg7.png)
+
 2. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
 
-3. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account.
+3. On the **Data** **(1)** page, view the **Linked** **(2)** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account.
+
+   ![](./images/labimg3.png)    
 
 4. On the **Data** page, switch back to the **Workspace** tab and note that there are no databases in your workspace.
 
 5. In the **+** menu, select **Lake database** to open a new tab in which you can design your database schema (accepting the database templates terms of use if prompted).
 
+   ![](./images/labimg8.png)
+
 6. In the **Properties** pane for the new database, change the **Name** to **RetailDB** and verify that the **Input folder** property is automatically updated to **files/RetailDB**. Leave the **Data format** as **Delimited Text** (you could also use *Parquet* format, and you can override the file format for individual tables - we'll use comma-delimited data in this exercise.)
+
+   ![](./images/labimg9.png)
 
 7. At the top of the **RetailDB** pane, select **Publish** to save the database so far.
 
 8. In the **Data** pane on the left, view the **Linked** tab. Then expand **Azure Data Lake Storage Gen2** and the primary **datalake*xxxxxxx*** storage for your **synapse*xxxxxxx*** workspace, and select the **files** file system, which currently contains a folder named **synapse**.
+
+   ![](./images/labimg10.png)
 
 9.  In the **files** tab that has opened, select **More** dropdown, then select **New folder** button to create a new folder named **RetailDB** - this will be the input folder for the data files used by tables in your database.
 
@@ -208,6 +218,8 @@ So far, you've created tables and then populated them with data. In some cases, 
 
 ### Task 6.2: Create a table
 
+In this task, you will create a table SalesOrder from data lake and verify it. 
+
 1. In the main pane, switch back to the **RetailDB** pane, which contains your database schema (currently containing the **Customer** and **Product** tables).
 2. In the **+ Table** menu, select **From data lake**. Then in the **Create external table from data lake** pane, specify the following options:
     - **External table name**: SalesOrder
@@ -269,6 +281,8 @@ Now that you have some tables in your database, you can use them to work with th
 
 ### Task 7.2: Insert data using Spark
 
+In this task, you will be inserting data in to the table using notebook attached to the Spark.
+
 1. In the **Develop** pane, in the **+** menu, select **Notebook**.
 
 2. In the new **Notebook 1** pane, select the dropdown beside **Attach to** and select **spark*xxxxxxx**** Spark pool.
@@ -304,6 +318,10 @@ Now that you have some tables in your database, you can use them to work with th
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.   
+
+## Summary
+
+In this lab, you have successfully modified container permissions within a Storage account, created a lake database in Synapse Studio, and built tables using both database templates and existing data. Additionally, you worked with lake database tables, gaining hands-on experience in managing and utilizing structured data within a Synapse environment.
 
 ## Review
 
