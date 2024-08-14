@@ -8,9 +8,10 @@ SQL is probably the most used language for working with data in the world. Most 
   
 After completing this lab, you will be able to:
 
-+ Task 1: Query the data in files.
-+ Task 2: Access external data in a database.
-+ Task 3: Visualize the query results.
++ Task 1: Provision an Azure Synapse Analytics workspace
++ Task 2: Query the data in files.
++ Task 3: Access external data in a database.
++ Task 4: Visualize the query results.
 
 ### Estimated timing: 45 minutes
 
@@ -22,7 +23,7 @@ After completing this lab, you will be able to:
 
 You'll need an Azure Synapse Analytics workspace with access to data lake storage. You can use the built-in serverless SQL pool to query files in the data lake.
 
-In this exercise, you'll use a combination of a PowerShell script and an ARM template to provision an Azure Synapse Analytics workspace.
+In this task, you'll use a combination of a PowerShell script and an ARM template to provision an Azure Synapse Analytics workspace.
 
 1. Click on the **Cloud Shell** button **[\>_]**  to the right of the search bar at the top of the page to create a new Cloud Shell, select  ***PowerShell*** environment and click on **Create storage** if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
 
@@ -68,6 +69,8 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 ## Task 2: Query data in files
 
 The script provisions an Azure Synapse Analytics workspace and an Azure Storage account to host the data lake, then uploads some data files to the data lake.
+
+In this task, you will  be working with Synapse Studio where you will query the data for diffrent files.
 
 ### Task 2.1: View files in the data lake
 
@@ -295,6 +298,8 @@ JSON is another popular data format, so it;s useful to be able to query .json fi
 
 So far, you've used the OPENROWSET function in a SELECT query to retrieve data from files in a data lake. The queries have been run in the context of the **master** database in your serverless SQL pool. This approach is fine for an initial exploration of the data, but if you plan to create more complex queries it may be more effective to use the *PolyBase* capability of Synapse SQL to create objects in a database that reference the external data location.
 
+In this task, you will be creating an external data source and use SQL script to create the database with tables.
+
 ### Task 3.1: Create an external data source
 
 By defining an external data source in a database, you can use it to reference the data lake location where the files are stored.
@@ -400,6 +405,8 @@ The external data source makes it easier to access the files in the data lake, b
 ## Task 4: Visualize query results
 
 Now that you've explored various ways to query files in the data lake by using SQL queries, you can analyze the results of these queries to gain insights into the data. Often, insights are easier to uncover by visualizing the query results in a chart; which you can easily do by using the integrated charting functionality in the Synapse Studio query editor.
+
+In this task, you will work on retriving the data using SQL script and visualize using the chart tool.
 
 1. In Synapse Studio, on the **Data** page, Sales (SQL) database in the **...** menu, select **SQL script** and hit on empty script.
 

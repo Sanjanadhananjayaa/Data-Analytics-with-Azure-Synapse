@@ -8,11 +8,13 @@ Azure Synapse Analytics enables you to combine the flexibility of file storage i
   
 After completing this lab, you will be able to:
 
-+ Task 1: Modify container permissions in the Stroage account.
-+ Task 2: Create a lake database in Synapse Studio.
-+ Task 3: Create a table from a database template.
-+ Task 4: Create a table from existing data.
-+ Task 5: Work with lake database tables.
++ Task 1: Provision an Azure Synapse Analytics workspace
++ Task 2: Modify container permissions.
++ Task 3: Create a lake database in Synapse Studio.
++ Task 4: Create a table 
++ Task 5: Create a table from a database template.
++ Task 6: Create a table from existing data.
++ Task 7: Work with lake database tables.
 
 ### Estimated timing: 90 minutes
 
@@ -24,7 +26,7 @@ After completing this lab, you will be able to:
 
 To support a lake database, you need an Azure Synapse Analytics workspace with access to data lake storage. There is no need for a dedicated SQL pool, since you can define the lake database using the built-in serverless SQL pool. Optionally, you can also use a Spark pool to work with data in the lake database.
 
-In this exercise, you'll use a combination of a PowerShell script and an ARM template to provision an Azure Synapse Analytics workspace.
+In this task, you'll use a combination of a PowerShell script and an ARM template to provision an Azure Synapse Analytics workspace.
 
 1. In Azure Portal, use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell, selecting a ***PowerShell*** environment and click on **Create storage** if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
 
@@ -68,6 +70,8 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
 ## Task 2: Modify container permissions
 
+In this task, you will be modifying the container permissions to Microsoft Entra User Account.
+
 1. After the deployment script has completed, in the Azure portal, go to the **analyticsxxxxx** resource group that is created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
 
 2. Select the **Storage account** named **datalakexxxxxxx** 
@@ -80,9 +84,11 @@ In this exercise, you'll use a combination of a PowerShell script and an ARM tem
 
     ![Change to Azure AD user account](./images/dp203-switch-to-aad-user.png)
 
-## Task 3: Create a lake database
+## Task 3: Create a lake database in Synapse Studio
 
 A lake database is a type of database that you can define in your workspace, and work with using the built-in serverless SQL pool.
+
+In this task, you will be creating a lake database with the RetailDB and modify its properties and publish it.
 
 1. Go back to the **analyticsxxxxx** resource group and select your Synapse workspace, and in its **Overview** page, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab, sign in if prompted.
 
@@ -112,7 +118,7 @@ A lake database is a type of database that you can define in your workspace, and
 
 9.  In the **files** tab that has opened, select **More** dropdown, then select **New folder** button to create a new folder named **RetailDB** - this will be the input folder for the data files used by tables in your database.
 
-## Task 4: Create a table
+## Task 4: Create a table 
 
 Now that you have created a lake database, you can define its schema by creating tables.
 
@@ -153,9 +159,11 @@ Now that you have created a lake database, you can define its schema by creating
 
 4. Close the **SQL script 1** tab, discarding your changes.
 
-## Task 5: Create a table from a database template
+## Task 5: Create a table from template
 
 As you've seen, you can create the tables you need in your lake database from scratch. However, Azure Synapse Analytics also provides numerous database templates based on common database workloads and entities that you can use as a starting point for your database schema.
+
+In this task, you will define a schema for the table RetailDB and load the data to it.
 
 ### Task 5.1: Define the table schema
 
@@ -206,6 +214,8 @@ As you've seen, you can create the tables you need in your lake database from sc
 
 So far, you've created tables and then populated them with data. In some cases, you may already have data in a data lake from which you want to derive a table.
 
+In this task, you will use an existing data which is already present and create a table and import this data to that table.
+
 ### Task 6.1: Upload data
 
 1. In the main pane, switch back to the **files** tab, which contains the file system, and navigate to the **files/RetailDB** folder, which currently contains the **Customer** and **Product** folders for the tables you created previously.
@@ -255,6 +265,8 @@ In this task, you will create a table SalesOrder from data lake and verify it.
 ## Task 7: Work with lake database tables
 
 Now that you have some tables in your database, you can use them to work with the underlying data.
+
+In this task, you will be querying these tables using SQL scripts and also you will be inserting data using notebooks.
 
 ### Task 7.1: Query tables using SQL
 
