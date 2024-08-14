@@ -183,7 +183,7 @@ In this task, we will ingest data into Azure Synapse Analytics by creating a pip
 
 1. On the **Data** page, select the **Linked** tab and expand the **Azure Data Lake Storage Gen2** and then expand **synapse*xxxxxxx* (Primary) datalake** container hierarchy until you see the **files** file storage for your Synapse workspace. Then select the file storage to verify that a folder named **sales_data** containing a file named **sales.csv** has been copied to this location, as shown here:
 
-    ![Image showing Synapse Studio expanded Azure Data Lake Storage hierarchy with the file storage for your Synapse workspace](./images/product_files.png)
+    ![Image showing Synapse Studio expanded Azure Data Lake Storage hierarchy with the file storage for your Synapse workspace](./images/product_files1.png)
 
 2. Right-click the **sales.csv** data file and select **Preview** to view the ingested data. Then close the preview.
 
