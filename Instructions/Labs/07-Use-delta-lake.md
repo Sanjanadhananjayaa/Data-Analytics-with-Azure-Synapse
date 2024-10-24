@@ -83,7 +83,7 @@ In this task, we will create delta tables by first exploring data in the data la
 
 1. In the **Overview** page for your Synapse workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
 
-   ![Azure portal with a cloud shell pane](./images/DA-image8.png)
+   ![Azure portal with a cloud shell pane](./images/DA-image(8).png)
    
 1. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
 
