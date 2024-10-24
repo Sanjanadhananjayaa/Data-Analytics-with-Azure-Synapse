@@ -72,7 +72,7 @@ In this task, we will provision an Azure Synapse Analytics workspace using Power
 
 In this task, we will open Synapse Studio, verify the status of the dedicated SQL pool, and inspect the data files in Azure Data Lake Storage. we use SQL scripts to load data from CSV files into staging tables and manage any errors encountered during the loading process.
 
-1. After the script has completed, in the Azure portal search and select **Resource group**, go to the **analytics** resource group that it created, and select your **Synapse workspace**.
+1. After the script has completed, in the Azure portal search and select **Resource group**, select **analytics (1)** resource group that it created, and select your **Synapse workspace (2)**.
 
     ![Azure portal with a cloud shell pane](./images/DA-image6.png)
 
@@ -87,15 +87,14 @@ In this task, we will open Synapse Studio, verify the status of the dedicated SQ
 
      ![Azure portal with a cloud shell pane](./images/DA-image(9).png)
 
-
-1. On the **Manage** page, on the **SQL pools** tab, select the row for the **sql*xxxxxxx*** dedicated SQL pool, which hosts the data warehouse for this exercise, and use its **&#9655;** icon to start it if its not started; confirming that you want to resume it when prompted.
+1. On the **Manage (1)** section, on the **SQL pools (2)** tab, select the row for the **sql*xxxxxxx*** dedicated SQL pool, which hosts the data warehouse for this exercise, and use its **&#9655;** **(3)** icon to start it if its not started; confirming that you want to resume it when prompted.
 
    ![Azure portal with a cloud shell pane](./images/DA-image(10).png)
 
    ![Azure portal with a cloud shell pane](./images/DA-image11.png)
 
-
-   Resuming the pool can take a few minutes. You can use the **&#8635; Refresh** button to check its status periodically. The status will show as **Online** when it's ready. While you're waiting, proceed with the steps below to view the data files you will load.
+   >**Note**Resuming the pool can take a few minutes. You can use the **&#8635; Refresh** button to check its status periodically. The status will show as **Online** 
+    when it's ready. While you're waiting, proceed with the steps below to view the data files you will load.
 
     ![Azure portal with a cloud shell pane](./images/DA-image(12).png)
 
@@ -128,9 +127,7 @@ In this task, we will open Synapse Studio, verify the status of the dedicated SQ
 Let's look at some SQL Based approaches to loading data into the Data Warehouse.
 
 1. On the  **Data** page, select the **workspace** tab.
-2. Expand **SQL Database** and select your **sql*xxxxxxx*** database. Then in its **...** menu, select **New SQL Script** >**Empty Script**.
-
-   ![Azure portal with a cloud shell pane](./images/DA-image(19).png)
+2. Expand **SQL Database** and select your **sql*xxxxxxx** database. Then in its **...** menu, select **New SQL Script** >**Empty Script**.
 
 ### Task 3.1: Load data from a data lake by using the COPY statement
 In this task, you now have a blank SQL page, which is connected to the instance. You will use this script to explore several SQL techniques that you can use to load data.
