@@ -75,7 +75,7 @@ In this task, we will create delta tables by first exploring data in the data la
 
 ### Task 2.1: Explore the data in the data lake
 
-1. After the script has completed, in the Azure portal, go to the **analytics** resource group that it created, and select your **Synapse workspace**.
+1. After the script has completed, in the Azure portal, search and select **Resource group** and select **analytics (1)** resource group that it created, and select your **Synapse workspace (2)**.
 
     ![Azure portal with a cloud shell pane](./images/DA-image6.png)
 
@@ -85,11 +85,11 @@ In this task, we will create delta tables by first exploring data in the data la
 
    ![Azure portal with a cloud shell pane](./images/DA-image(8).png)
    
-1. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
+1. On the left side of **Synapse Studio**, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
 
    ![Azure portal with a cloud shell pane](./images/DA-image(9).png)
  
-4. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapse*xxxxxxx* (Primary - datalake*xxxxxxx*)**.
+4. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapsexxxxxxx(Primary - datalakexxxxxxx)**.
 
     ![Azure portal with a cloud shell pane](./images/DA-image(13).png)
 
@@ -109,7 +109,7 @@ In this task, we will create delta tables by first exploring data in the data la
 
    ![Azure portal with a cloud shell pane](./images/DA-image28.png)
 
-9. In the **Notebook 1** pane that opens, in the **Attach to** list, select the **sparkxxxxxxx** Spark pool and ensure that the **Language** is set to **PySpark (Python)**.
+9. In the **Notebook 1** pane that opens, in the **Attach to** list, select the **sparkxxxxxxx (1)** Spark pool and ensure that the **Language** is set to **PySpark (Python) (2)**.
 
    ![Azure portal with a cloud shell pane](./images/DA-image29.png)
 
@@ -158,7 +158,7 @@ In this task, we will create delta tables by first exploring data in the data la
 
     > **Note**: If the **+ Code** option isn't visible, try hovering your mouse cursor below the results to reveal it.
 
-1. On the **files** tab, use the **&#8593;** icon in the toolbar to return to the root of the **files** container, and note that a new folder named **delta** has been created. Open this folder and the **products-delta** table it contains, where you should see the parquet format file(s) containing the data.
+1. On the **files (1)** tab, use the **&#8593;** **(2)** icon in the toolbar to return to the root of the **files** container, and note that a new folder named **delta (3)** has been created. Open this folder and the **products-delta (4)** table it contains, where you should see the parquet format file(s) containing the data.
 
     ![Azure portal with a cloud shell pane](./images/DA-image(33).png)
 
@@ -446,7 +446,7 @@ In this lab, we will query a delta table from a serverless SQL pool. We will use
 
 1. In the **files** tab, browse to the **files/delta** folder.
 
-2. Select and right click the **products-delta** folder, in the **New SQL script** drop-down list, select **Select TOP 100 rows**.
+2. Select and right click the **products-delta (1)** folder, in the **New SQL script (2)** drop-down list, select **Select TOP 100 rows (3)**.
 
       ![Azure portal with a cloud shell pane](./images/DA-image36.png)
 
@@ -485,15 +485,12 @@ In this lab, we will query a delta table from a serverless SQL pool. We will use
 
 7. Run the code and observe that you can also use the serverless SQL pool to query Delta Lake data in catalog tables that are defined the Spark metastore.
 
-   <validation step="61bfb30e-1ad6-4205-97ae-935789802c65" />   
+ > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+ > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+ > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+ > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+ <validation step="61bfb30e-1ad6-4205-97ae-935789802c65" />
 
 ## Summary
 
