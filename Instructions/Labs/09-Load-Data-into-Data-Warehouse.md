@@ -81,7 +81,7 @@ In this task, we will open Synapse Studio, verify the status of the dedicated SQ
    
 1. In the **Overview page** for your Synapse Workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
 
-   ![Azure portal with a cloud shell pane](./images/DA-image8.png)
+   ![Azure portal with a cloud shell pane](./images/DA-image(8).png)
 
 1. On the left side of Synapse Studio, use the ›› icon to expand the menu - revealing the different pages within Synapse Studio that you’ll use to manage resources and perform data analytics tasks.
 
