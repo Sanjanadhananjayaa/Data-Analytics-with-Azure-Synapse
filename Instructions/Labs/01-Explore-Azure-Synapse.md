@@ -77,27 +77,31 @@ In this task, we will provision an Azure Synapse Analytics workspace using a Pow
 
 In this task, we will explore Synapse Studio by navigating through its various pages, including Data, Develop, Integrate, Monitor, and Manage, to understand its capabilities for managing and analyzing data.
 
-1. When the setup script has finished running, in the Azure portal, go to the **analytics** resource group that it created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, an Apache Spark pool and a Dedicated SQL pool.
+1. After the script has completed, in the Azure portal, go to the **analytics** resource group that it created, and select your **Synapse workspace**.
 
-    ![Azure portal with a cloud shell pane](./images/cloud-shell4.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image6.png)
 
-2. Select your Synapse workspace, and in its **Overview** page, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab. Synapse Studio is a web-based interface that you can use to work with your Synapse Analytics workspace.
+    ![Azure portal with a cloud shell pane](./images/DA-image(7).png)
+   
+1. In the **Overview** page for your Synapse workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
 
-3. On the left side of Synapse Studio, use the **&rsaquo;&raquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks, as shown here:
+   ![Azure portal with a cloud shell pane](./images/DA-image(8).png)
 
-    ![Image showing the expanded Synapse Studio menu to manage resources and perform data analytics tasks](./images/synapse-studio.png)
+4. On the left side of Synapse Studio, use the **&rsaquo;&raquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks, as shown here:
 
-4. View the **Data** page, and note that there are two tabs containing data sources:
+    ![Azure portal with a cloud shell pane](./images/DA-image(9).png)
+
+5. View the **Data** page, and note that there are two tabs containing data sources:
     - A **Workspace** tab containing databases defined in the workspace (including dedicated SQL databases and Data Explorer databases)
     - A **Linked** tab containing data sources that are linked to the workspace, including Azure Data Lake storage.
 
-5. View the **Develop** page, which is currently empty. This is where you can define scripts and other assets used to develop data processing solutions.
+6. View the **Develop** page, which is currently empty. This is where you can define scripts and other assets used to develop data processing solutions.
 
-6. View the **Integrate** page, which is also empty. You use this page to manage data ingestion and integration assets; such as pipelines to transfer and transform data between data sources.
+7. View the **Integrate** page, which is also empty. You use this page to manage data ingestion and integration assets; such as pipelines to transfer and transform data between data sources.
 
-7. View the **Monitor** page. This is where you can observe data processing jobs as they run and view their history.
+8. View the **Monitor** page. This is where you can observe data processing jobs as they run and view their history.
 
-8. View the **Manage** page. This is where you manage the pools, runtimes, and other assets used in your Azure Synapse workspace. View each of the tabs in the **Analytics pools** section and note that your workspace includes the following pools:
+9. View the **Manage** page. This is where you manage the pools, runtimes, and other assets used in your Azure Synapse workspace. View each of the tabs in the **Analytics pools** section and note that your workspace includes the following pools:
     - **SQL pools**:
         - **Built-in**: A *serverless* SQL pool that you can use on-demand to explore or process data in a data lake by using SQL commands.
         - **sql*xxxxxxx***: A *dedicated* SQL pool that hosts a relational data warehouse database.
