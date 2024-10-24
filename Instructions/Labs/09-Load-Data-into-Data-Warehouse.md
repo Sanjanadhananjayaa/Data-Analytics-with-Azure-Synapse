@@ -210,6 +210,7 @@ In this task, you now have a blank SQL page, which is connected to the instance.
     >**Note**: The use of staging tables enables you to validate or transform data before moving or using it to append to or upsert into any existing dimension tables. The COPY statement provides a simple but high-performance technique that you can use to easily load data from files in a data lake into staging tables, and as you've seen, identify and redirect invalid rows.
 
 ### Task 3.2: Use a CREATE TABLE AS (CTAS) statement
+In this task, you will create a new table using a CREATE TABLE AS SELECT (CTAS) statement with hash distribution and a clustered columnstore index to optimize query performance.
 
 1. Return to the script pane, and replace the code it contains with the following code:
 
@@ -256,6 +257,8 @@ In this task, you now have a blank SQL page, which is connected to the instance.
 
 ### Task 3.3: Combine INSERT and UPDATE statements to load a slowly changing dimension table
 
+In this task, you will load a slowly changing dimension table by combining INSERT and UPDATE statements to handle type 1 and type 2 changes, ensuring that both new and existing customer data are accurately maintained.
+
 The **DimCustomer** table supports type 1 and type 2 slowly changing dimensions (SCDs), where type 1 changes result in an in-place update to an existing row, and type 2 changes result in a new row to indicate the latest version of a particular dimension entity instance. Loading this table requires a combination of INSERT statements (to load new customers) and UPDATE statements (to apply type 1 or type 2 changes).
 
 1. In the query pane, replace the existing SQL code with the following code:
@@ -295,6 +298,8 @@ The **DimCustomer** table supports type 1 and type 2 slowly changing dimensions 
 2. Run the script to load new data into the data warehouse.
 
 ## Task 4: Perform post-load optimization
+
+In this task, you will perform post-load optimization by rebuilding indexes on the DimProduct table and creating or updating statistics on the GeographyKey column in the DimCustomer table to improve query performance.
 
 After loading new data into the data warehouse, it's recommended to rebuild the table indexes and update statistics on commonly queried columns.
 
