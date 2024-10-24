@@ -90,7 +90,7 @@ In this task, we will open Synapse Studio, verify the status of the dedicated SQ
 
 1. On the **Manage** page, on the **SQL pools** tab, select the row for the **sql*xxxxxxx*** dedicated SQL pool, which hosts the data warehouse for this exercise, and use its **&#9655;** icon to start it if its not started; confirming that you want to resume it when prompted.
 
-   ![Azure portal with a cloud shell pane](./images/DA-image10.png)
+   ![Azure portal with a cloud shell pane](./images/DA-image(10).png)
 
    ![Azure portal with a cloud shell pane](./images/DA-image11.png)
 
@@ -101,15 +101,15 @@ In this task, we will open Synapse Studio, verify the status of the dedicated SQ
 
 1. On the **Data (1)** page, view the **Linked (2)** tab and verify that your workspace includes a link to your **Azure Data Lake Storage Gen2 (3)** storage account, which should have a name similar to **synapsexxxxxxx (Primary - datalakexxxxxxx) (4)**.
 
-      ![Azure portal with a cloud shell pane](./images/DA-image13.png)
+      ![Azure portal with a cloud shell pane](./images/DA-image(13).png)
 
 1. Expand your storage account and verify that it contains a file system container named **files (primary)**.
 
-    ![Azure portal with a cloud shell pane](./images/DA-image14.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image(14).png)
 
 1. Select the files container, and note that it contains a folder named **data**. This folder contains the data files you're going to load into the data warehouse.
 
-    ![Azure portal with a cloud shell pane](./images/DA-image15.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image(15).png)
 
 1. Open the **data** folder and observe that it contains .csv files of **customer** and **product** data.
 
