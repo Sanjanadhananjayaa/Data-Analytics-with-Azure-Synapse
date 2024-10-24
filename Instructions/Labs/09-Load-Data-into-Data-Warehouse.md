@@ -97,7 +97,7 @@ In this task, we will open Synapse Studio, verify the status of the dedicated SQ
 
    Resuming the pool can take a few minutes. You can use the **&#8635; Refresh** button to check its status periodically. The status will show as **Online** when it's ready. While you're waiting, proceed with the steps below to view the data files you will load.
 
-    ![Azure portal with a cloud shell pane](./images/DA-image12.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image(12).png)
 
 1. On the **Data (1)** page, view the **Linked (2)** tab and verify that your workspace includes a link to your **Azure Data Lake Storage Gen2 (3)** storage account, which should have a name similar to **synapsexxxxxxx (Primary - datalakexxxxxxx) (4)**.
 
