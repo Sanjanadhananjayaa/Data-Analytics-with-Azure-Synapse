@@ -75,7 +75,7 @@ In this task, we will create delta tables by first exploring data in the data la
 
 ### Task 2.1: Explore the data in the data lake
 
-1. After the script has completed, in the Azure portal, go to the **analytics** resource group that it created, and select your **Synapse workspace**.
+1. After the script has completed, in the Azure portal, search and select **Resource group** and select **analytics (1)** resource group that it created, and select your **Synapse workspace (2)**.
 
     ![Azure portal with a cloud shell pane](./images/DA-image6.png)
 
