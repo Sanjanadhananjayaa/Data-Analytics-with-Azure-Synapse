@@ -123,7 +123,10 @@ In this task, we will ingest data into Azure Synapse Analytics by creating a pip
 
 1. In Synapse Studio, on the **Home** page, select **Ingest** to open the **Copy Data** tool
 
+     ![Azure portal with a cloud shell pane](./images/DA-image66.png)
+
 2. In the Copy Data tool, on the **Properties** step, ensure that **Built-in copy task** and **Run once now** are selected, and click **Next >**.
+      ![Azure portal with a cloud shell pane](./images/DA-image67.png)
 
 3. On the **Source** step, in the **Dataset** substep, select the following settings:
     - **Source type**: All
@@ -206,7 +209,7 @@ In this task, we will ingest data into Azure Synapse Analytics by creating a pip
 
      ![Azure portal with a cloud shell pane](./images/DA-image50.png)
     
-15. View the **Integrate** page, and verify that it now contains a **pipeline** named **Copy products**.
+14. View the **Integrate** page, and verify that it now contains a **pipeline** named **Copy products**.
 
     ![Azure portal with a cloud shell pane](./images/DA-image48.png)
 
@@ -226,12 +229,12 @@ In this task, we will ingest data into Azure Synapse Analytics by creating a pip
 
    <validation step="839cbf4c-f048-4b81-bb5f-a2d033dc3e26" />
 
-  **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+ > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+ > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+ > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+ > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+  
+ <validation step="839cbf4c-f048-4b81-bb5f-a2d033dc3e26" />
 
 ## Task 4: Use a serverless SQL pool to analyze data
 
@@ -320,13 +323,13 @@ In this task, we will use a serverless SQL pool to query and analyze data stored
 
     ![Azure portal with a cloud shell pane](./images/DA-image57.png)
 
-10. Close the **Count Products by Category** script pane.
+9. Close the **Count Products by Category** script pane.
 
-11. In Synapse Studio, select the **Develop** page, and notice that your published **Count Products by Category** SQL script has been saved there.
+10. In Synapse Studio, select the **Develop** page, and notice that your published **Count Products by Category** SQL script has been saved there.
 
-12. Select the **Count Products by Category** SQL script to reopen it. Then ensure that the script is connected to the **Built-in** SQL pool and run it to retrieve the product counts.
+11. Select the **Count Products by Category** SQL script to reopen it. Then ensure that the script is connected to the **Built-in** SQL pool and run it to retrieve the product counts.
 
-13. In the **Results** pane, select the **Chart** view, and then select the following settings for the chart:
+12. In the **Results** pane, select the **Chart** view, and then select the following settings for the chart:
     - **Chart type**: Column
     - **Category column**: Category
     - **Legend (series) columns**: ProductCount
@@ -376,7 +379,7 @@ In this task, we will analyze data using a Spark pool by running PySpark code to
 
     ![Azure portal with a cloud shell pane](./images/DA-image59.png)
 
-6. Uncomment the *,header=True* line (because the sales.csv file has the column headers in the first line), so your code looks like this:
+5. Uncomment the *,header=True* line (because the sales.csv file has the column headers in the first line), so your code looks like this:
 
     ```Python
     %%pyspark
@@ -387,7 +390,7 @@ In this task, we will analyze data using a Spark pool by running PySpark code to
     display(df.limit(10))
     ```
 
-7. Rerun the cell and verify that the results look like this:
+6. Rerun the cell and verify that the results look like this:
 
     | ProductID | ProductName | Category | ListPrice |
     | -- | -- | -- | -- |
@@ -397,11 +400,11 @@ In this task, we will analyze data using a Spark pool by running PySpark code to
 
     Notice that running the cell again takes less time, because the Spark pool is already started.
 
-8. Under the results, use the **&#65291; Code** icon to add a new code cell to the notebook.
+7. Under the results, use the **&#65291; Code** icon to add a new code cell to the notebook.
 
     > **Note**: If the **+ Code** option isn't visible, try hovering your mouse cursor below the results to reveal it.
 
-9. In the new empty code cell, add the following code:
+8. In the new empty code cell, add the following code:
 
     ```Python
     df_counts = df.groupby(df.Category).count()
@@ -409,7 +412,7 @@ In this task, we will analyze data using a Spark pool by running PySpark code to
     ```
      ![Azure portal with a cloud shell pane](./images/DA-image60.png)
 
-10. Run the new code cell by clicking its **&#9655;** icon, and review the results, which should look similar to this:
+9. Run the new code cell by clicking its **&#9655;** icon, and review the results, which should look similar to this:
 
     | Category | count |
     | -- | -- |
@@ -417,13 +420,13 @@ In this task, we will analyze data using a Spark pool by running PySpark code to
     | Wheels | 14 |
     | ... | ... |
 
-11. In the results output for the cell, select the **Chart** view. The resulting chart should resemble this:
+10. In the results output for the cell, select the **Chart** view. The resulting chart should resemble this:
 
     ![Azure portal with a cloud shell pane](./images/DA-image61.png)
 
-12. If it is not already visible, show the **Properties** page by selecting the **Properties** button (which looks similar to **&#128463;<sub>*</sub>**) on the right end of the toolbar. Then in the **Properties** pane, change the notebook name to **Explore sales** and use the **Publish** button on the toolbar to save it.
+11. If it is not already visible, show the **Properties** page by selecting the **Properties** button (which looks similar to **&#128463;<sub>*</sub>**) on the right end of the toolbar. Then in the **Properties** pane, change the notebook name to **Explore sales** and use the **Publish** button on the toolbar to save it.
 
-13. Close the notebook pane and stop the Spark session when prompted. Then view the **Develop** page to verify that the notebook has been saved.
+12. Close the notebook pane and stop the Spark session when prompted. Then view the **Develop** page to verify that the notebook has been saved.
 
 ## Task 6: Use a dedicated SQL pool to query a data warehouse
 
