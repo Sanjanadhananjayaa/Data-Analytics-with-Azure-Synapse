@@ -76,7 +76,7 @@ In this task, we will open Synapse Studio, verify the status of the dedicated SQ
 
     ![Azure portal with a cloud shell pane](./images/DA-image6.png)
 
-    ![Azure portal with a cloud shell pane](./images/DA-image7.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image(7).png)
 
    
 1. In the **Overview page** for your Synapse Workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
@@ -85,7 +85,7 @@ In this task, we will open Synapse Studio, verify the status of the dedicated SQ
 
 1. On the left side of Synapse Studio, use the ›› icon to expand the menu - revealing the different pages within Synapse Studio that you’ll use to manage resources and perform data analytics tasks.
 
-     ![Azure portal with a cloud shell pane](./images/DA-image9.png)
+     ![Azure portal with a cloud shell pane](./images/DA-image(9).png)
 
 
 1. On the **Manage** page, on the **SQL pools** tab, select the row for the **sql*xxxxxxx*** dedicated SQL pool, which hosts the data warehouse for this exercise, and use its **&#9655;** icon to start it if its not started; confirming that you want to resume it when prompted.
