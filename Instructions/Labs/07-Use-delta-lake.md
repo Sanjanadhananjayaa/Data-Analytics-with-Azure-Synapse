@@ -85,11 +85,11 @@ In this task, we will create delta tables by first exploring data in the data la
 
    ![Azure portal with a cloud shell pane](./images/DA-image(8).png)
    
-1. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
+1. On the left side of **Synapse Studio**, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
 
    ![Azure portal with a cloud shell pane](./images/DA-image(9).png)
  
-4. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapse*xxxxxxx* (Primary - datalake*xxxxxxx*)**.
+4. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapsexxxxxxx(Primary - datalakexxxxxxx)**.
 
     ![Azure portal with a cloud shell pane](./images/DA-image(13).png)
 
@@ -109,7 +109,7 @@ In this task, we will create delta tables by first exploring data in the data la
 
    ![Azure portal with a cloud shell pane](./images/DA-image28.png)
 
-9. In the **Notebook 1** pane that opens, in the **Attach to** list, select the **sparkxxxxxxx** Spark pool and ensure that the **Language** is set to **PySpark (Python)**.
+9. In the **Notebook 1** pane that opens, in the **Attach to** list, select the **sparkxxxxxxx (1)** Spark pool and ensure that the **Language** is set to **PySpark (Python) (2)**.
 
    ![Azure portal with a cloud shell pane](./images/DA-image29.png)
 
@@ -158,7 +158,7 @@ In this task, we will create delta tables by first exploring data in the data la
 
     > **Note**: If the **+ Code** option isn't visible, try hovering your mouse cursor below the results to reveal it.
 
-1. On the **files** tab, use the **&#8593;** icon in the toolbar to return to the root of the **files** container, and note that a new folder named **delta** has been created. Open this folder and the **products-delta** table it contains, where you should see the parquet format file(s) containing the data.
+1. On the **files (1)** tab, use the **&#8593;** **(2)** icon in the toolbar to return to the root of the **files** container, and note that a new folder named **delta (3)** has been created. Open this folder and the **products-delta (4)** table it contains, where you should see the parquet format file(s) containing the data.
 
     ![Azure portal with a cloud shell pane](./images/DA-image(33).png)
 
@@ -446,7 +446,7 @@ In this lab, we will query a delta table from a serverless SQL pool. We will use
 
 1. In the **files** tab, browse to the **files/delta** folder.
 
-2. Select and right click the **products-delta** folder, in the **New SQL script** drop-down list, select **Select TOP 100 rows**.
+2. Select and right click the **products-delta (1)** folder, in the **New SQL script (2)** drop-down list, select **Select TOP 100 rows (3)**.
 
       ![Azure portal with a cloud shell pane](./images/DA-image36.png)
 
