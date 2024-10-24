@@ -105,9 +105,14 @@ In this task, we will explore Synapse Studio by navigating through its various p
     - **SQL pools**:
         - **Built-in**: A *serverless* SQL pool that you can use on-demand to explore or process data in a data lake by using SQL commands.
         - **sql*xxxxxxx***: A *dedicated* SQL pool that hosts a relational data warehouse database.
+    
+           ![Azure portal with a cloud shell pane](./images/DA-image38.png)
+    
     - **Apache Spark pools**:
         - **spark*xxxxxxx***: that you can use on-demand to explore or process data in a data lake by using programming languages like Scala or Python.
-  
+
+          ![Azure portal with a cloud shell pane](./images/DA-image39.png)
+
 ## Task 3: Ingest data with a pipeline
 
 One of the key tasks you can perform with Azure Synapse Analytics is to define *pipelines* that transfer (and if necessary, transform) data from a wide range of sources into your workspace for analysis.
@@ -129,6 +134,12 @@ In this task, we will ingest data into Azure Synapse Analytics by creating a pip
         - **Base URL**: `https://raw.githubusercontent.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse/main/Allfiles/labs/01/adventureworks/products.csv`
         - **Server Certificate Validation**: Enable
         - **Authentication type**: Anonymous
+     
+           ![Azure portal with a cloud shell pane](./images/DA-image40.png)
+
+           ![Azure portal with a cloud shell pane](./images/DA-image41.png)
+
+           ![Azure portal with a cloud shell pane](./images/DA-image42.png)
 
 4. After creating the connection, on the **Source data store** page, ensure the following settings are selected, and then select **Next >**:
     - **Relative URL**: *Leave blank*
@@ -137,6 +148,8 @@ In this task, we will ingest data into Azure Synapse Analytics by creating a pip
     - **Binary copy**: <u>Un</u>selected
     - **Request timeout**: *Leave blank*
     - **Max concurrent connections**: *Leave blank*
+
+      ![Azure portal with a cloud shell pane](./images/DA-image43.png)
 
 5. On the **Source** step, in the **Configuration** substep, select **Preview data** to see a preview of the product data your pipeline will ingest, then close the preview.
 
@@ -147,16 +160,20 @@ In this task, we will ingest data into Azure Synapse Analytics by creating a pip
     - **First row as header**: Selected
     - **Compression type**: *Leave blank*
 
+       ![Azure portal with a cloud shell pane](./images/DA-image44.png)
+      
 7. On the **Destination** step, in the **Dataset** substep, select the following settings:
     - **Destination type**: Azure Data Lake Storage Gen 2
     - **Connection**: *Select the existing connection to your data lake store (this was created for you when you created the workspace).*
 
 8. After selecting the connection, on the **Destination/Dataset** step, ensure the following settings are selected, and then select **Next >**:
-    - **Folder path**: files/sales_data
+    - **Folder path**: Click on Browse and select files/sales_data 
     - **File name**: sales.csv
     - **Copy behavior**: *Leave blank*
     - **Max concurrent connections**: *Leave blank*
     - **Block size (MB)**: *Leave blank*
+
+      ![Azure portal with a cloud shell pane](./images/DA-image45.png)
 
 9. On the **Destination** step, in the **Configuration** substep, on the **File format settings** page, ensure that the following properties are selected. Then select **Next >**:
 
@@ -168,6 +185,8 @@ In this task, we will ingest data into Azure Synapse Analytics by creating a pip
     - **Max rows per file**: *Leave blank*
     - **File name prefix**: *Leave blank*
 
+      ![Azure portal with a cloud shell pane](./images/DA-image46.png)
+
 10. On the **Settings** step, enter the following settings and then click **Next >**:
     - **Task name**: Copy products
     - **Task description** Copy products data
@@ -175,21 +194,35 @@ In this task, we will ingest data into Azure Synapse Analytics by creating a pip
     - **Enable logging**: <u>Un</u>selected
     - **Enable staging**: <u>Un</u>selected
 
+      ![Azure portal with a cloud shell pane](./images/DA-image47.png)
+
 11. On the **Review and finish** step, on the **Review** substep, read the summary and then click **Next >**.
 
 12. On the **Deployment** step, wait for the pipeline to be deployed and then click **Finish**.
 
 13. In Synapse Studio, select the **Monitor** page, and in the **Pipeline runs** tab, wait for the **Copy products** pipeline to complete with a status of **Succeeded** (you can use the **&#8635; Refresh** button on the Pipeline runs page to refresh the status).
 
-14. View the **Integrate** page, and verify that it now contains a pipeline named **Copy products**.
+     ![Azure portal with a cloud shell pane](./images/DA-image49.png)
+
+     ![Azure portal with a cloud shell pane](./images/DA-image50.png)
+    
+15. View the **Integrate** page, and verify that it now contains a **pipeline** named **Copy products**.
+
+    ![Azure portal with a cloud shell pane](./images/DA-image48.png)
 
 ### Task 3.2: View the ingested data
 
 1. On the **Data** page, select the **Linked** tab and expand the **Azure Data Lake Storage Gen2** and then expand **synapse*xxxxxxx* (Primary) datalake** container hierarchy until you see the **files** file storage for your Synapse workspace. Then select the file storage to verify that a folder named **sales_data** containing a file named **sales.csv** has been copied to this location, as shown here:
 
-    ![Image showing Synapse Studio expanded Azure Data Lake Storage hierarchy with the file storage for your Synapse workspace](./images/product_files1.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image51.png)
 
-2. Right-click the **sales.csv** data file and select **Preview** to view the ingested data. Then close the preview.
+   ![Azure portal with a cloud shell pane](./images/DA-image52.png)
+
+3. Right-click the **sales.csv** data file and select **Preview** to view the ingested data. Then click on **OK** to exit preview page.
+
+     ![Azure portal with a cloud shell pane](./images/DA-image53.png)
+
+     ![Azure portal with a cloud shell pane](./images/DA-image55.png)
 
    <validation step="839cbf4c-f048-4b81-bb5f-a2d033dc3e26" />
 
@@ -224,7 +257,10 @@ In this task, we will use a serverless SQL pool to query and analyze data stored
     This code  opens a rowset from the text file you imported and retrieves the first 100 rows of data.
 
 3. In the **Connect to** list, ensure **Built-in** is selected - this represents the built-in SQL Pool that was created with your workspace.
-4. On the toolbar, use the **&#9655; Run** button to run the SQL code, and review the results, which should look similar to this:
+
+    ![Azure portal with a cloud shell pane](./images/DA-image55.png)
+
+4. In the code (replacing *datalakexxxxxxx* with the name of your data lake storage account) on the toolbar, use the **&#9655; Run** button to run the SQL code, and review the results, which should look similar to this:
 
     | C1 | C2 | C3 | C4 |
     | -- | -- | -- | -- |
@@ -278,15 +314,19 @@ In this task, we will use a serverless SQL pool to query and analyze data stored
     | Bike Racks | 1 |
     | ... | ... |
 
-8. In the **Properties** pane for **SQL Script 1**, change the **Name** to **Count Products by Category**. Then in the toolbar, select **Publish** to save the script.
+8. In the **Properties** pane for **SQL Script 1**, change the **Name** to **Count Products by Category**. Then in the toolbar, select **Publish** to save the script. On **Publish all** window select **Publish**.
 
-9. Close the **Count Products by Category** script pane.
+    ![Azure portal with a cloud shell pane](./images/DA-image56.png)
 
-10. In Synapse Studio, select the **Develop** page, and notice that your published **Count Products by Category** SQL script has been saved there.
+    ![Azure portal with a cloud shell pane](./images/DA-image57.png)
 
-11. Select the **Count Products by Category** SQL script to reopen it. Then ensure that the script is connected to the **Built-in** SQL pool and run it to retrieve the product counts.
+10. Close the **Count Products by Category** script pane.
 
-12. In the **Results** pane, select the **Chart** view, and then select the following settings for the chart:
+11. In Synapse Studio, select the **Develop** page, and notice that your published **Count Products by Category** SQL script has been saved there.
+
+12. Select the **Count Products by Category** SQL script to reopen it. Then ensure that the script is connected to the **Built-in** SQL pool and run it to retrieve the product counts.
+
+13. In the **Results** pane, select the **Chart** view, and then select the following settings for the chart:
     - **Chart type**: Column
     - **Category column**: Category
     - **Legend (series) columns**: ProductCount
@@ -307,7 +347,13 @@ While SQL is a common language for querying structured datasets, many data analy
 In this task, we will analyze data using a Spark pool by running PySpark code to load and process data, perform aggregations, and visualize results with charts.
 
 1. In Synapse Studio, if the **files** tab you opened earlier containing the **sales.csv** file is no longer open, on the **Data** page, browse **sales_data** folder. Then right-click **sales.csv**, point to **New notebook**, and select **Load to DataFrame**.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image58.png)
+
 2. In the **Notebook 1** pane that opens, in the **Attach to** list, select the **sparkxxxxxxx** Spark pool and ensure that the **Language** is set to **PySpark (Python)**.
+
+    ![Azure portal with a cloud shell pane](./images/DA-image29.png)
+
 3. Review the code in the first (and only) cell in the notebook, which should look like this:
 
     ```Python
@@ -319,8 +365,7 @@ In this task, we will analyze data using a Spark pool by running PySpark code to
     display(df.limit(10))
     ```
 
-4. Use the **&#9655;** icon to the left of the code cell to run it, and wait for the results. The first time you run a cell in a notebook, the Spark pool is started - so it may take a minute or so to return any results.
-5. Eventually, the results should appear below the cell, and they should be similar to this:
+4. Use the **&#9655;** icon to the left of the code cell to run it, and wait for the results. The first time you run a cell in a notebook, the Spark pool is started - so it may take a minute or so to return any results. Eventually, the results should appear below the cell, and they should be similar to this:
 
     | _c0_ | _c1_ | _c2_ | _c3_ |
     | -- | -- | -- | -- |
@@ -328,6 +373,8 @@ In this task, we will analyze data using a Spark pool by running PySpark code to
     | 771 | Mountain-100 Silver, 38 | Mountain Bikes | 3399.9900 |
     | 772 | Mountain-100 Silver, 42 | Mountain Bikes | 3399.9900 |
     | ... | ... | ... | ... |
+
+    ![Azure portal with a cloud shell pane](./images/DA-image59.png)
 
 6. Uncomment the *,header=True* line (because the sales.csv file has the column headers in the first line), so your code looks like this:
 
@@ -360,6 +407,7 @@ In this task, we will analyze data using a Spark pool by running PySpark code to
     df_counts = df.groupby(df.Category).count()
     display(df_counts)
     ```
+     ![Azure portal with a cloud shell pane](./images/DA-image60.png)
 
 10. Run the new code cell by clicking its **&#9655;** icon, and review the results, which should look similar to this:
 
@@ -371,7 +419,7 @@ In this task, we will analyze data using a Spark pool by running PySpark code to
 
 11. In the results output for the cell, select the **Chart** view. The resulting chart should resemble this:
 
-    ![Image showing category count chart view](./images/bar-chart.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image61.png)
 
 12. If it is not already visible, show the **Properties** page by selecting the **Properties** button (which looks similar to **&#128463;<sub>*</sub>**) on the right end of the toolbar. Then in the **Properties** pane, change the notebook name to **Explore sales** and use the **Publish** button on the toolbar to save it.
 
@@ -384,9 +432,21 @@ So far you've seen some techniques for exploring and processing file-based data 
 In this task, we will query a data warehouse using a dedicated SQL pool. We will execute SQL queries to retrieve and aggregate sales data and save the queries for future use.
 
 1. In Synapse Studio, on the **Manage** page, in the **SQL pools** section, select the **sql*xxxxxxx*** dedicated SQL pool row and then use its **&#9655;** icon to resume it. Select **Resume** when prompted.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image(10).png)
+
+   ![Azure portal with a cloud shell pane](./images/DA-image11.png)
+
+
 2. Wait for the SQL pool to start. This can take a few minutes. Use the **&#8635; Refresh** button to check its status periodically. The status will show as **Online** when it is ready.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image62.png)
+
 3. When the SQL pool has started, select the **Data** page; and on the **Workspace** tab, expand **SQL databases** and verify that **sql*xxxxxxx*** is listed (use **&#8635;** icon at the top-left of the page to refresh the view if necessary).
 4. Expand the **sql*xxxxxxx*** database and its **Tables** folder,  and then in the **...** menu for the **FactInternetSales** table, point to **New SQL script**, and select **Select TOP 100 rows**.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image63.png)
+
 5. Review the results of the query, which show the first 100 sales transactions in the table. This data was loaded into the database by the setup script, and is permanently stored in the database associated with the dedicated SQL pool.
 6. Replace the SQL query with the following code:
 
@@ -406,6 +466,10 @@ In this task, we will query a data warehouse using a dedicated SQL pool. We will
 9. Close the query pane, and then view the **Develop** page to verify that the SQL script has been saved.
 
 10. On the **Manage** page, select the **sql*xxxxxxx*** dedicated SQL pool row and use its &#10074;&#10074; icon to pause it. Click **Pause** if prompted.
+
+    ![Azure portal with a cloud shell pane](./images/DA-image64.png)
+
+    ![Azure portal with a cloud shell pane](./images/DA-image65.png)
 
 ## Summary
 
