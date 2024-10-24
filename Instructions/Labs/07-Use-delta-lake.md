@@ -87,7 +87,7 @@ In this task, we will create delta tables by first exploring data in the data la
    
 1. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
 
-   ![Azure portal with a cloud shell pane](./images/DA-image9.png)
+   ![Azure portal with a cloud shell pane](./images/DA-image(9).png)
  
 4. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapse*xxxxxxx* (Primary - datalake*xxxxxxx*)**.
 
@@ -160,7 +160,7 @@ In this task, we will create delta tables by first exploring data in the data la
 
 1. On the **files** tab, use the **&#8593;** icon in the toolbar to return to the root of the **files** container, and note that a new folder named **delta** has been created. Open this folder and the **products-delta** table it contains, where you should see the parquet format file(s) containing the data.
 
-    ![Azure portal with a cloud shell pane](./images/DA-image33.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image(33).png)
 
     ![Azure portal with a cloud shell pane](./images/DA-image34.png)
 
