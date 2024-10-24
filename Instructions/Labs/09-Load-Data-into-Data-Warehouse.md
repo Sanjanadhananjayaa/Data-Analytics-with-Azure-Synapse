@@ -66,7 +66,7 @@ In this task, we will provision an Azure Synapse Analytics workspace using Power
 
     > **Note**: Be sure to remember this password!
 
-9. Wait for the script to complete - typically this takes around 10 minutes, but in some cases may take longer. While you're waiting, review the [Data loading strategies for dedicated SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading) article in the Azure Synapse Analytics documentation.
+1. Wait for the script to complete - typically this takes around 10 minutes, but in some cases may take longer. While you're waiting, review the [Data loading strategies for dedicated SQL pool in Azure Synapse Analytics](https://learn.microsoft.com/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading) article in the Azure Synapse Analytics documentation.
 
 ## Task 2: Prepare to load data
 
@@ -79,16 +79,16 @@ In this task, we will open Synapse Studio, verify the status of the dedicated SQ
     ![Azure portal with a cloud shell pane](./images/DA-image7.png)
 
    
-3. In the **Overview page** for your Synapse Workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
+1. In the **Overview page** for your Synapse Workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
 
    ![Azure portal with a cloud shell pane](./images/DA-image8.png)
 
-4. On the left side of Synapse Studio, use the ›› icon to expand the menu - revealing the different pages within Synapse Studio that you’ll use to manage resources and perform data analytics tasks.
+1. On the left side of Synapse Studio, use the ›› icon to expand the menu - revealing the different pages within Synapse Studio that you’ll use to manage resources and perform data analytics tasks.
 
      ![Azure portal with a cloud shell pane](./images/DA-image9.png)
 
 
-5. On the **Manage** page, on the **SQL pools** tab, select the row for the **sql*xxxxxxx*** dedicated SQL pool, which hosts the data warehouse for this exercise, and use its **&#9655;** icon to start it if its not started; confirming that you want to resume it when prompted.
+1. On the **Manage** page, on the **SQL pools** tab, select the row for the **sql*xxxxxxx*** dedicated SQL pool, which hosts the data warehouse for this exercise, and use its **&#9655;** icon to start it if its not started; confirming that you want to resume it when prompted.
 
    ![Azure portal with a cloud shell pane](./images/DA-image10.png)
 
@@ -99,30 +99,29 @@ In this task, we will open Synapse Studio, verify the status of the dedicated SQ
 
     ![Azure portal with a cloud shell pane](./images/DA-image12.png)
 
-7. On the **Data (1)** page, view the **Linked (2)** tab and verify that your workspace includes a link to your **Azure Data Lake Storage Gen2 (3)** storage account, which should have a name similar to **synapsexxxxxxx (Primary - datalakexxxxxxx) (4)**.
+1. On the **Data (1)** page, view the **Linked (2)** tab and verify that your workspace includes a link to your **Azure Data Lake Storage Gen2 (3)** storage account, which should have a name similar to **synapsexxxxxxx (Primary - datalakexxxxxxx) (4)**.
 
       ![Azure portal with a cloud shell pane](./images/DA-image13.png)
 
-8. Expand your storage account and verify that it contains a file system container named **files (primary)**.
+1. Expand your storage account and verify that it contains a file system container named **files (primary)**.
 
     ![Azure portal with a cloud shell pane](./images/DA-image14.png)
 
-9. Select the files container, and note that it contains a folder named **data**. This folder contains the data files you're going to load into the data warehouse.
+1. Select the files container, and note that it contains a folder named **data**. This folder contains the data files you're going to load into the data warehouse.
 
     ![Azure portal with a cloud shell pane](./images/DA-image15.png)
 
-11. Open the **data** folder and observe that it contains .csv files of **customer** and **product** data.
+1. Open the **data** folder and observe that it contains .csv files of **customer** and **product** data.
 
       ![Azure portal with a cloud shell pane](./images/DA-image16.png)
 
-12. Right-click any of the files and select **Preview** to see the data it contains. Note the files contain a header row, so you can select the option to display column headers and click **OK** to exist from the preview page.
+1. Right-click any of the files and select **Preview** to see the data it contains. Note the files contain a header row, so you can select the option to display column headers and click **OK** to exist from the preview page.
 
      ![Azure portal with a cloud shell pane](./images/DA-image17.png)
 
      ![Azure portal with a cloud shell pane](./images/DA-image18.png)
-
-    
-13. Return to the **Manage** page and verify that your dedicated SQL pool is online.
+   
+1. Return to the **Manage** page and verify that your dedicated SQL pool is online.
 
 ## Task 3: Load data warehouse tables
 
@@ -142,11 +141,11 @@ In this task, you now have a blank SQL page, which is connected to the instance.
     SELECT COUNT(1) 
     FROM dbo.StageProduct
     ```
-2. On the toolbar, use the **&#9655; Run** button to run the SQL code and confirm that there are **0** rows currently in the **StageProduct** table.
+1. On the toolbar, use the **&#9655; Run** button to run the SQL code and confirm that there are **0** rows currently in the **StageProduct** table.
 
    ![Azure portal with a cloud shell pane](./images/DA-image20.png)
    
-4. Replace the code with the following COPY statement (changing **datalake*xxxxxx*** to the name of your data lake):
+1. Replace the code with the following COPY statement (changing **datalake*xxxxxx*** to the name of your data lake):
 
    ```sql
     COPY INTO dbo.StageProduct
@@ -169,11 +168,11 @@ In this task, you now have a blank SQL page, which is connected to the instance.
 
      ![Azure portal with a cloud shell pane](./images/DA-image22.png)
   
-6. Run the script and review the results. 11 rows should have been loaded into the **StageProduct** table.
+1. Run the script and review the results. 11 rows should have been loaded into the **StageProduct** table.
 
     Now let's use the same technique to load another table, this time logging any errors that might occur.
 
-7. Replace the SQL code in the script pane with the following code, changing **datalake*xxxxxx*** to the name of your data lake in both the ```FROM``` and the ```ERRORFILE``` clauses:
+1. Replace the SQL code in the script pane with the following code, changing **datalake*xxxxxx*** to the name of your data lake in both the ```FROM``` and the ```ERRORFILE``` clauses:
 
     ```sql
     COPY INTO dbo.StageCustomer
@@ -191,18 +190,18 @@ In this task, you now have a blank SQL page, which is connected to the instance.
     );
     ```
 
-8. Run the script and review the resulting message in **Messages** tab. The source file contains a row with invalid data, so one row is rejected. The code above specifies a maximum of **5** errors, so a single error should not have prevented the valid rows from being loaded. You can view the rows that *have* been loaded by running the following query.
+1. Run the script and review the resulting message in **Messages** tab. The source file contains a row with invalid data, so one row is rejected. The code above specifies a maximum of **5** errors, so a single error should not have prevented the valid rows from being loaded. You can view the rows that *have* been loaded by running the following query.
 
     ```sql
     SELECT *
     FROM dbo.StageCustomer
     ```
 
-9. On the **files** tab, view the root folder of your data lake and verify that a new folder named **_rejectedrows** has been created (if you don't see this folder, in the **More** menu, select **Refresh** to refresh the view).
+1. On the **files** tab, view the root folder of your data lake and verify that a new folder named **_rejectedrows** has been created (if you don't see this folder, in the **More** menu, select **Refresh** to refresh the view).
 
    ![Azure portal with a cloud shell pane](./images/DA-image23.png)
 
-10. Open the **_rejectedrows** folder and the date and time specific subfolder it contains, and note that files with names similar to ***QID147_1_1*.Error.Txt** and ***QID147_1_1*.Row.Txt** have been created. You can right-click each of these files and select **Preview** to see details of the error and the row that was rejected.
+1. Open the **_rejectedrows** folder and the date and time specific subfolder it contains, and note that files with names similar to ***QID147_1_1*.Error.Txt** and ***QID147_1_1*.Row.Txt** have been created. You can right-click each of these files and select **Preview** to see details of the error and the row that was rejected.
 
     ![Azure portal with a cloud shell pane](./images/DA-image24.png)
 
