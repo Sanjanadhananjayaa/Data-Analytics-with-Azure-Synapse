@@ -113,7 +113,7 @@ In this task, we will open Synapse Studio, verify the status of the dedicated SQ
 
 1. Open the **data** folder and observe that it contains .csv files of **customer** and **product** data.
 
-      ![Azure portal with a cloud shell pane](./images/DA-image16.png)
+      ![Azure portal with a cloud shell pane](./images/DA-image(16).png)
 
 1. Right-click any of the files and select **Preview** to see the data it contains. Note the files contain a header row, so you can select the option to display column headers and click **OK** to exist from the preview page.
 
@@ -130,7 +130,7 @@ Let's look at some SQL Based approaches to loading data into the Data Warehouse.
 1. On the  **Data** page, select the **workspace** tab.
 2. Expand **SQL Database** and select your **sql*xxxxxxx*** database. Then in its **...** menu, select **New SQL Script** >**Empty Script**.
 
-   ![Azure portal with a cloud shell pane](./images/DA-image19.png)
+   ![Azure portal with a cloud shell pane](./images/DA-image(19).png)
 
 ### Task 3.1: Load data from a data lake by using the COPY statement
 In this task, you now have a blank SQL page, which is connected to the instance. You will use this script to explore several SQL techniques that you can use to load data.
@@ -162,11 +162,11 @@ In this task, you now have a blank SQL page, which is connected to the instance.
     FROM dbo.StageProduct
     ```
 
-    ![Azure portal with a cloud shell pane](./images/DA-image21.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image(21).png)
 
     >**Note** : You can find datalakexxxx value by navigating to **Data section > Linked > Azure Data Lake Storage Gen2**, please refer below screenshot.
 
-     ![Azure portal with a cloud shell pane](./images/DA-image22.png)
+     ![Azure portal with a cloud shell pane](./images/DA-image(22).png)
   
 1. Run the script and review the results. 11 rows should have been loaded into the **StageProduct** table.
 
