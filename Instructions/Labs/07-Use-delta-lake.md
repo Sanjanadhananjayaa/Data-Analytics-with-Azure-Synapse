@@ -75,15 +75,44 @@ In this task, we will create delta tables by first exploring data in the data la
 
 ### Task 2.1: Explore the data in the data lake
 
-1. After the script has completed, in the Azure portal, go to the **analytics** resource group that it created, and select your Synapse workspace.
-2. In the **Overview** page for your Synapse workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
-3. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
+1. After the script has completed, in the Azure portal, go to the **analytics** resource group that it created, and select your **Synapse workspace**.
+
+    ![Azure portal with a cloud shell pane](./images/DA-image6.png)
+
+    ![Azure portal with a cloud shell pane](./images/DA-image(7).png)
+
+1. In the **Overview** page for your Synapse workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image8.png)
+   
+1. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image9.png)
+ 
 4. On the **Data** page, view the **Linked** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapse*xxxxxxx* (Primary - datalake*xxxxxxx*)**.
+
+    ![Azure portal with a cloud shell pane](./images/DA-image(13).png)
+
 5. Expand your storage account and verify that it contains a file system container named **files**.
+
+    ![Azure portal with a cloud shell pane](./images/DA-image(14).png)
+
 6. Select the **files** container, and note that it contains a folder named **products**. This folder contains the data you are going to work with in this exercise.
+
+    ![Azure portal with a cloud shell pane](./images/DA-image26.png)
+
 7. Open the **products** folder, and observe that it contains a file named **products.csv**.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image27.png)
+
 8. Select **products.csv**, and then in the **New notebook** list on the toolbar, select **Load to DataFrame**.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image28.png)
+
 9. In the **Notebook 1** pane that opens, in the **Attach to** list, select the **sparkxxxxxxx** Spark pool and ensure that the **Language** is set to **PySpark (Python)**.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image29.png)
+
 10. Review the code in the first (and only) cell in the notebook, which should look like this:
 
     ```Python
@@ -114,6 +143,8 @@ In this task, we will create delta tables by first exploring data in the data la
     | 772 | Mountain-100 Silver, 42 | Mountain Bikes | 3399.9900 |
     | ... | ... | ... | ... |
 
+    ![Azure portal with a cloud shell pane](./images/DA-image31.png)
+
 ### Task 2.2: Load the file data into a delta table
 
 1. Under the results returned by the first code cell, use the **+ Code** button to add a new code cell. Then enter the following code in the new cell and run it:
@@ -123,11 +154,17 @@ In this task, we will create delta tables by first exploring data in the data la
     df.write.format("delta").save(delta_table_path)
     ```
 
+    ![Azure portal with a cloud shell pane](./images/DA-image32.png)
+
     > **Note**: If the **+ Code** option isn't visible, try hovering your mouse cursor below the results to reveal it.
 
-2. On the **files** tab, use the **&#8593;** icon in the toolbar to return to the root of the **files** container, and note that a new folder named **delta** has been created. Open this folder and the **products-delta** table it contains, where you should see the parquet format file(s) containing the data.
+1. On the **files** tab, use the **&#8593;** icon in the toolbar to return to the root of the **files** container, and note that a new folder named **delta** has been created. Open this folder and the **products-delta** table it contains, where you should see the parquet format file(s) containing the data.
 
-3. Return to the **Notebook 1** tab and add another new code cell. Then, in the new cell, add the following code and run it:
+    ![Azure portal with a cloud shell pane](./images/DA-image33.png)
+
+    ![Azure portal with a cloud shell pane](./images/DA-image34.png)
+
+4. Return to the **Notebook 1** tab and add another new code cell. Then, in the new cell, add the following code and run it:
 
     ```Python
     from delta.tables import *
@@ -147,7 +184,7 @@ In this task, we will create delta tables by first exploring data in the data la
 
     The data is loaded into a **DeltaTable** object and updated. You can see the update reflected in the query results.
 
-4. Add another new code cell with the following code and run it:
+5. Add another new code cell with the following code and run it:
 
     ```Python
     new_df = spark.read.format("delta").load(delta_table_path)
@@ -156,7 +193,7 @@ In this task, we will create delta tables by first exploring data in the data la
 
     The code loads the delta table data into a data frame from its location in the data lake, verifying that the change you made via a **DeltaTable** object has been persisted.
 
-5. Modify the code you just ran as follows, specifying the option to use the *time travel* feature of delta lake to view a previous version of the data.
+6. Modify the code you just ran as follows, specifying the option to use the *time travel* feature of delta lake to view a previous version of the data.
 
     ```Python
     new_df = spark.read.format("delta").option("versionAsOf", 0).load(delta_table_path)
@@ -165,7 +202,7 @@ In this task, we will create delta tables by first exploring data in the data la
 
     When you run the modified code, the results show the original version of the data.
 
-6. Add another new code cell with the following code and run it:
+7. Add another new code cell with the following code and run it:
 
     ```Python
     deltaTable.history(10).show(20, False, True)
@@ -408,8 +445,13 @@ In addition to Spark pools, Azure Synapse Analytics includes a built-in serverle
 In this lab, we will query a delta table from a serverless SQL pool. We will use SQL code to query Delta Lake format files and catalog tables, demonstrating the capability to perform SQL queries on data managed by Spark.
 
 1. In the **files** tab, browse to the **files/delta** folder.
+
 2. Select and right click the **products-delta** folder, in the **New SQL script** drop-down list, select **Select TOP 100 rows**.
+
+      ![Azure portal with a cloud shell pane](./images/DA-image36.png)
+
 3. In the **Select TOP 100 rows** pane, in the **File type** list, select **Delta format** and then select **Apply**.
+
 4. Review the SQL code that is generated, which should look like this:
 
     ```sql
