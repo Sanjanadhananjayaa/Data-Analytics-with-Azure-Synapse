@@ -204,12 +204,7 @@ Now that you have created a lake database, you can define its schema by creating
 
 ### Task 4.2: Load data into the table's storage path
 
-1. In the main pane, switch back to the **files** tab, which contains the file system with the **RetailDB** folder. Then open the **RetailDB** folder and create a new folder named **Customer** in it by selecting **More** > **New folder**. This is where the **Customer** table will get its data.
-
-
-      ![Azure portal with a cloud shell pane](./images/DA-image86.png)
-
-      ![Azure portal with a cloud shell pane](./images/DA-image87.png)
+1. In the main pane, switch back to the **files** tab, which contains the file system with the **RetailDB** folder. Then open the **RetailDB** folder and create a new folder named **Customer** in it. This is where the **Customer** table will get its data.
 
 2. Open the new **Customer** folder, which should be empty.
 
