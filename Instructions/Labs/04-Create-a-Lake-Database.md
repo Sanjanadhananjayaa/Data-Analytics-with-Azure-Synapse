@@ -196,8 +196,6 @@ Now that you have created a lake database, you can define its schema by creating
 
 6. When you've added all of the columns, **publish** the database again to save the changes.
 
-     ![Azure portal with a cloud shell pane](./images/DA-image84.png)
-
 7. In the **Data** pane on the left, switch back to the **Workspace** tab so you can see the **RetailDB** lake database. Then expand it and refresh its **Tables** folder to see the newly created **Customer** table.
 
       ![Azure portal with a cloud shell pane](./images/DA-image85.png)
@@ -213,6 +211,8 @@ Now that you have created a lake database, you can define its schema by creating
     > **Note**: In a real production scenario, you would probably create a pipeline to ingest data into the folder for the table data. We're uploading it directly in the Synapse Studio user interface in this exercise for expediency.
 
 3. In the **Data** pane on the left, on the **Workspace** tab, in the **...** menu for the **Customer** table, select **New SQL script** > **Select TOP 100 rows**. Then, in the new **SQL script 1** pane that has opened, ensure that the **Built-in** SQL pool is connected, and use the **&#9655; Run** button to run the SQL code. The results should include first 100 rows from the **Customer** table, based on the data stored in the underlying folder in the data lake.
+
+    ![Azure portal with a cloud shell pane](./images/DA-image89.png)
 
 4. Close the **SQL script 1** tab, discarding your changes.
 
