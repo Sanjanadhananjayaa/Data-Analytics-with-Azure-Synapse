@@ -185,11 +185,18 @@ Now that you have created a lake database, you can define its schema by creating
 
 6. Add more new columns until the table definition looks like this:
 
-    ![Change to Azure AD user account](./images/DP-203(4-3).png)
+   | **Name**         | **Description**           | **Description**     | **Data type**                |
+   | ---------------  | ------------------------- | --------------------| ---------------------------- |
+   |**LastName**      | **Customer last name**    | Check box **Null**  | **abc String**               |
+   |**EmailAddress**  | **Customer email**        | Uncheck box **Null**| **abc String**              |
+   |**Phone**  | **Customer phone**               | Uncheck box **Null**| **abc String**              |
+   
 
-7. When you've added all of the columns, publish the database again to save the changes.
+   ![Change to Azure AD user account](./images/DP-203(4-3).png)
 
-8. In the **Data** pane on the left, switch back to the **Workspace** tab so you can see the **RetailDB** lake database. Then expand it and refresh its **Tables** folder to see the newly created **Customer** table.
+6. When you've added all of the columns, publish the database again to save the changes.
+
+7. In the **Data** pane on the left, switch back to the **Workspace** tab so you can see the **RetailDB** lake database. Then expand it and refresh its **Tables** folder to see the newly created **Customer** table.
 
 ### Task 4.2: Load data into the table's storage path
 
