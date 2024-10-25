@@ -194,13 +194,22 @@ Now that you have created a lake database, you can define its schema by creating
 
    ![Change to Azure AD user account](./images/DP-203(4-3).png)
 
-6. When you've added all of the columns, publish the database again to save the changes.
+6. When you've added all of the columns, **publish** the database again to save the changes.
+
+     ![Azure portal with a cloud shell pane](./images/DA-image84.png)
 
 7. In the **Data** pane on the left, switch back to the **Workspace** tab so you can see the **RetailDB** lake database. Then expand it and refresh its **Tables** folder to see the newly created **Customer** table.
 
+      ![Azure portal with a cloud shell pane](./images/DA-image85.png)
+
 ### Task 4.2: Load data into the table's storage path
 
-1. In the main pane, switch back to the **files** tab, which contains the file system with the **RetailDB** folder. Then open the **RetailDB** folder and create a new folder named **Customer** in it. This is where the **Customer** table will get its data.
+1. In the main pane, switch back to the **files** tab, which contains the file system with the **RetailDB** folder. Then open the **RetailDB** folder and create a new folder named **Customer** in it by selecting **More** > **New folder**. This is where the **Customer** table will get its data.
+
+
+      ![Azure portal with a cloud shell pane](./images/DA-image86.png)
+
+      ![Azure portal with a cloud shell pane](./images/DA-image87.png)
 
 2. Open the new **Customer** folder, which should be empty.
 
