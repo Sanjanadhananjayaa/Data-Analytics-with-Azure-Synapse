@@ -379,14 +379,12 @@ In this task, you will be inserting data in to the table using notebook attached
 
 8. Close the **Notebook 1** pane, stopping the Spark session and discarding your changes.
 
-   <validation step="c7c2a4b7-1b09-4a42-a89c-255c051ca4e4" />
+ > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+ > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+ > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+ > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.   
 
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.   
+ <validation step="c7c2a4b7-1b09-4a42-a89c-255c051ca4e4" />
 
 ## Summary
 
