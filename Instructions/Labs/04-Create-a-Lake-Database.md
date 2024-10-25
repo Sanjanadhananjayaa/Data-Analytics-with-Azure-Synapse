@@ -148,17 +148,40 @@ Now that you have created a lake database, you can define its schema by creating
 ### Task 4.1: Define the table schema
 
 1. Switch back to the **RetailDB** tab for your database definition, and in the **+ Table** list, select **Custom**, and note that a new table named **Table_1** is added to your database.
+      ![Azure portal with a cloud shell pane](./images/DA-image81.png)
 
 2. With **Table_1** selected, in the **General** tab under the database design canvas, change the **Name** property to **Customer**.
 
+    ![Azure portal with a cloud shell pane](./images/DA-image82.png)
+
+
 3. Scroll down in the **General** tab, expand the **Storage settings for table** section and note that the table will be stored as delimited text in the **files/RetailDB/Customer** folder in the default data lake store for your Synapse workspace.
-4. On the **Columns** tab, note that by default, the table contains one column named **Column_1**. Edit the column definition to match the following properties:
 
-    ![Change to Azure AD user account](./images/DP-203(4-1).png)
+    ![Azure portal with a cloud shell pane](./images/DA-image83.png)
 
-5. In the **+ Column** list, select **New column**, and modify the new column definition to add a **FirstName** column to the table as follows:
+5. On the **Columns** tab, note that by default, the table contains one column named **Column_1**. Edit the column definition to match the following properties:
 
-    ![Change to Azure AD user account](./images/DP-203(4-2).png)
+     - Name CustomerId
+
+     - Key  select **PK**
+
+    - Description **Unique customer ID**
+
+     - Data type **12l Long**
+
+       ![Change to Azure AD user account](./images/DP-203(4-1).png)
+
+4. In the **+ Column** list, select **New column**, and modify the new column definition to add a **FirstName** column to the table as follows:
+
+     ![Azure portal with a cloud shell pane](./images/DA-image84.png)
+
+     Name **FirstName**
+
+     Description **Customer first name**
+
+     Data type **abc String**
+
+     ![Change to Azure AD user account](./images/DP-203(4-2).png)
 
 6. Add more new columns until the table definition looks like this:
 
