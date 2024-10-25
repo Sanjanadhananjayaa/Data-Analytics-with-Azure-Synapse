@@ -26,45 +26,35 @@ You'll need an Azure Synapse Analytics workspace with access to data lake storag
 
 In this task, you'll use a combination of a PowerShell script and an ARM template to provision an Azure Synapse Analytics workspace.
 
+1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the **Azure portal**.
 
-1. In Azure Portal, click on the **Cloud Shell** button **[\>_]** to the right of the search bar at the top of the page to create a new Cloud Shell, select  ***PowerShell*** environment and click on **Create storage** if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+    ![Azure portal with a cloud shell pane](./images/DA-image1.png)
 
-    ![Azure portal with a cloud shell pane](./images/cloud-shell.png)
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). If so, select PowerShell.
 
-2. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+    ![Azure portal with a cloud shell pane](./images/DA-image2.png)
 
-
-3. If You dont have precreated storage account, select mount storage account and subscription.
-
-    ![Azure portal with a cloud shell pane](./images/cloudshell_image1.png)
-
-4. Select i want to create a storage, click on **Next**. provide all the details, give unique storage account name and in file share section write **None**. Click on **Create**.
-
-   ![Azure portal with a cloud shell pane](./images/cloudshell_image2.png)
-
-   ![Azure portal with a cloud shell pane](./images/cloudshell_image3.png)
-
-5. In the PowerShell pane, enter the following commands to clone this repo:
+1. In the PowerShell pane, enter the following commands to clone this repo:
 
     ```
     rm -r synapse -f
     git clone https://github.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse synapse
     ```
 
-6. After the repo has been cloned, enter the following commands to change to the folder for this exercise and run the **setup.ps1** script it contains:
+1. After the repo has been cloned, enter the following commands to change to the folder for this exercise and run the **setup.ps1** script it contains:
 
     ```
     cd synapse/Allfiles/labs/06
     ./setup.ps1
     ```
 
-7. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
+1. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
 
-8. When prompted, enter a suitable password to be set for the Azure Synapse SQL pool.
+1. When prompted, enter a suitable password to be set for the Azure Synapse SQL pool.
 
     > **Note**: Be sure to remember this password!
 
-9. Wait for the script to complete - this typically takes around 10 minutes, but in some cases may take longer. While you are waiting, review the [Apache Spark in Azure Synapse Analytics Core Concepts](https://learn.microsoft.com/azure/synapse-analytics/spark/apache-spark-concepts) article in the Azure Synapse Analytics documentation.
+1. Wait for the script to complete - this typically takes around 10 minutes, but in some cases may take longer. While you are waiting, review the [Apache Spark in Azure Synapse Analytics Core Concepts](https://learn.microsoft.com/azure/synapse-analytics/spark/apache-spark-concepts) article in the Azure Synapse Analytics documentation.
 
 ## Task 2: Use a Spark notebook to transform data
 
@@ -126,16 +116,13 @@ In this task, you will be downloading a precreated notebook and using the spark 
 
     > **Note**: The first code cell will take a few minutes to run because the Spark pool must be started. Subsequent cells will run more quickly.
 
+ > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+ > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+ > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+ > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="29d3bdbe-a709-4d66-8667-d5b765e92d45" />
-
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
-
+ <validation step="29d3bdbe-a709-4d66-8667-d5b765e92d45" />
+ 
 ## Summary
 
 In this lab, you have provisioned an Azure Synapse Analytics workspace and utilized a Spark notebook to transform data, equipping you with the skills to manage and process large datasets efficiently within the Synapse environment.

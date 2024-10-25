@@ -28,23 +28,29 @@ To support a lake database, you need an Azure Synapse Analytics workspace with a
 
 In this task, you'll use a combination of a PowerShell script and an ARM template to provision an Azure Synapse Analytics workspace.
 
-1. In Azure Portal, use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell, selecting a ***PowerShell*** environment and click on **Create storage** if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the **Azure portal**.
 
-    ![Azure portal with a cloud shell pane](./images/cloud-shell.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image1.png)
 
-2. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). If so, select PowerShell.
 
+    ![Azure portal with a cloud shell pane](./images/DA-image2.png)
 
-3. If You dont have precreated storage account, select mount storage account and subscription.
+    > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, use the the drop-down menu at the top left of the cloud shell pane to change it to ***PowerShell***.
 
-    ![Azure portal with a cloud shell pane](./images/cloudshell_image1.png)
+1. On Getting started window choose **Mount storage account(1)** then under Storage account subscription select your available **subscription (2)** from the dropdown and click on **Apply (3)**.
 
-4. Select i want to create a storage, click on **Next**. provide all the details, give unique storage account name and in file share section write **None**. Click on **Create**.
+   ![Azure portal with a cloud shell pane](./images/DA-image3.png)
 
-   ![Azure portal with a cloud shell pane](./images/cloudshell_image2.png)
+1. Within the Mount storage account pane, select **I want to create a storage (1)** and click **Next (2)**.
 
-   ![Azure portal with a cloud shell pane](./images/cloudshell_image3.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image68.png)
 
+1. Please make sure you have selected your resource group **synapse** and then select any available **Region** and enter unique name for the **Storage account** and for the **File share**, then click on **Create**.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image69.png)
+
+1. Cloud Shell can be resized by dragging the separator bar at the top of the pane, or by using the —, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
 5. In the PowerShell pane, enter the following commands to clone this repo:
 
@@ -74,15 +80,18 @@ In this task, you will be modifying the container permissions to Microsoft Entra
 
 1. After the deployment script has completed, in the Azure portal, go to the **analyticsxxxxx** resource group that is created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
 
-2. Select the **Storage account** named **datalakexxxxxxx** 
 
-3. Within the **datalakexxxxxx** container, select the **files** folder.
+    ![Azure portal with a cloud shell pane](./images/DA-image70.png)
+   
+3. Select the **Storage account** named **datalakexxxxxxx** 
+   
+4. Within the **datalakexxxxxx** page, from the left navigation pane expand **Data storage** and select **Container** then click **files** folder.
 
-    ![Select the files folder within the data lake container](./images/dp203-Container.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image71.png)
 
-4. Within the **files** folder you'll note the **Authentication method:** is listed as ***Access key (Switch to Microsoft Entra user account)*** click on this to change to Microsoft Entra User Account.
+5. Within the **files** folder you'll note the **Authentication method:** is listed as ***Access key (Switch to Microsoft Entra user account)*** click on this to change to Microsoft Entra User Account.
 
-    ![Change to Azure AD user account](./images/dp203-switch-to-aad-user.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image72.png)
 
 ## Task 3: Create a lake database in Synapse Studio
 
@@ -90,33 +99,47 @@ A lake database is a type of database that you can define in your workspace, and
 
 In this task, you will be creating a lake database with the RetailDB and modify its properties and publish it.
 
-1. Go back to the **analyticsxxxxx** resource group and select your Synapse workspace, and in its **Overview** page, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab, sign in if prompted.
+1. Go back to the **analyticsxxxxx** resource group and select your **Synapse workspace**.
 
-   ![](./images/labimg7.png)
+     ![Azure portal with a cloud shell pane](./images/DA-image73.png)
 
-2. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
+1. In the **Overview page** for your Synapse Workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
 
-3. On the **Data** **(1)** page, view the **Linked** **(2)** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account.
+   ![Azure portal with a cloud shell pane](./images/DA-image(8).png)
 
-   ![](./images/labimg3.png)    
+1. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
 
-4. On the **Data** page, switch back to the **Workspace** tab and note that there are no databases in your workspace.
+      ![Azure portal with a cloud shell pane](./images/DA-image(9).png)
 
-5. In the **+** menu, select **Lake database** to open a new tab in which you can design your database schema (accepting the database templates terms of use if prompted).
+1. On the **Data** **(1)** page, view the **Linked** **(2)** tab and verify that your workspace includes a link to your **Azure Data Lake Storage Gen2** storage account.
 
-   ![](./images/labimg8.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image74.png)
 
-6. In the **Properties** pane for the new database, change the **Name** to **RetailDB** and verify that the **Input folder** property is automatically updated to **files/RetailDB**. Leave the **Data format** as **Delimited Text** (you could also use *Parquet* format, and you can override the file format for individual tables - we'll use comma-delimited data in this exercise.)
+1. On the **Data** page, switch back to the **Workspace** tab and note that there are no databases in your workspace.
 
-   ![](./images/labimg9.png)
+     ![Azure portal with a cloud shell pane](./images/DA-image75.png)
+   
+1. In the **+ (1)** menu, select **Lake database (2)** to open a new tab in which you can design your database schema (accepting the database templates terms of use if prompted).
 
-7. At the top of the **RetailDB** pane, select **Publish** to save the database so far.
+   ![Azure portal with a cloud shell pane](./images/DA-image76.png)
 
-8. In the **Data** pane on the left, view the **Linked** tab. Then expand **Azure Data Lake Storage Gen2** and the primary **datalake*xxxxxxx*** storage for your **synapse*xxxxxxx*** workspace, and select the **files** file system, which currently contains a folder named **synapse**.
+1. In the **Properties** pane for the new database, change the **Name** to **RetailDB** and verify that the **Input folder** property is automatically updated to **files/RetailDB**. Leave the **Data format** as **Delimited Text** (you could also use *Parquet* format, and you can override the file format for individual tables - we'll use comma-delimited data in this exercise.)
 
-   ![](./images/labimg10.png)
+   ![Azure portal with a cloud shell pane](./images/DA-image77.png)
 
-9.  In the **files** tab that has opened, select **More** dropdown, then select **New folder** button to create a new folder named **RetailDB** - this will be the input folder for the data files used by tables in your database.
+1. At the top of the **RetailDB** pane, select **Publish** to save the database so far.
+
+     ![Azure portal with a cloud shell pane](./images/DA-image78.png)
+
+1. On **Publish all** page click on **Publish**.
+
+1. In the **Data** pane on the left, view the **Linked** tab. Then expand **Azure Data Lake Storage Gen2** and the primary **datalake*xxxxxxx*** storage for your **synapse*xxxxxxx*** workspace, and select the **files** file system, which currently contains a folder named **synapse**.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image79.png)
+
+1. In the **files** tab that has opened, select **New folder** button to create a new folder named **RetailDB** - this will be the input folder for the data files used by tables in your database.
+
+    ![Azure portal with a cloud shell pane](./images/DA-image80.png)
 
 ## Task 4: Create a table 
 
@@ -125,25 +148,57 @@ Now that you have created a lake database, you can define its schema by creating
 ### Task 4.1: Define the table schema
 
 1. Switch back to the **RetailDB** tab for your database definition, and in the **+ Table** list, select **Custom**, and note that a new table named **Table_1** is added to your database.
+      ![Azure portal with a cloud shell pane](./images/DA-image81.png)
 
 2. With **Table_1** selected, in the **General** tab under the database design canvas, change the **Name** property to **Customer**.
 
+    ![Azure portal with a cloud shell pane](./images/DA-image82.png)
+
+
 3. Scroll down in the **General** tab, expand the **Storage settings for table** section and note that the table will be stored as delimited text in the **files/RetailDB/Customer** folder in the default data lake store for your Synapse workspace.
-4. On the **Columns** tab, note that by default, the table contains one column named **Column_1**. Edit the column definition to match the following properties:
 
-    ![Change to Azure AD user account](./images/DP-203(4-1).png)
+    ![Azure portal with a cloud shell pane](./images/DA-image83.png)
 
-5. In the **+ Column** list, select **New column**, and modify the new column definition to add a **FirstName** column to the table as follows:
+5. On the **Columns** tab, note that by default, the table contains one column named **Column_1**. Edit the column definition to match the following properties:
 
-    ![Change to Azure AD user account](./images/DP-203(4-2).png)
+     - Name CustomerId
+
+     - Key  select **PK**
+
+    - Description **Unique customer ID**
+
+     - Data type **12l Long**
+
+       ![Change to Azure AD user account](./images/DP-203(4-1).png)
+
+4. In the **+ Column** list, select **New column**, and modify the new column definition to add a **FirstName** column to the table as follows:
+
+     ![Azure portal with a cloud shell pane](./images/DA-image84.png)
+
+     Name **FirstName**
+
+     Description **Customer first name**
+
+     Data type **abc String**
+
+     ![Change to Azure AD user account](./images/DP-203(4-2).png)
 
 6. Add more new columns until the table definition looks like this:
 
-    ![Change to Azure AD user account](./images/DP-203(4-3).png)
+   | **Name**         | **Description**           | **Description**     | **Data type**                |
+   | ---------------  | ------------------------- | --------------------| ---------------------------- |
+   |**LastName**      | **Customer last name**    | Check box **Null**  | **abc String**               |
+   |**EmailAddress**  | **Customer email**        | Uncheck box **Null**| **abc String**               |
+   |**Phone**         | **Customer phone**        | Check box **Null**  | **abc String**               |
+   
 
-7. When you've added all of the columns, publish the database again to save the changes.
+   ![Change to Azure AD user account](./images/DP-203(4-3).png)
 
-8. In the **Data** pane on the left, switch back to the **Workspace** tab so you can see the **RetailDB** lake database. Then expand it and refresh its **Tables** folder to see the newly created **Customer** table.
+6. When you've added all of the columns, **publish** the database again to save the changes.
+
+7. In the **Data** pane on the left, switch back to the **Workspace** tab so you can see the **RetailDB** lake database. Then expand it and refresh its **Tables** folder to see the newly created **Customer** table.
+
+      ![Azure portal with a cloud shell pane](./images/DA-image85.png)
 
 ### Task 4.2: Load data into the table's storage path
 
@@ -156,6 +211,8 @@ Now that you have created a lake database, you can define its schema by creating
     > **Note**: In a real production scenario, you would probably create a pipeline to ingest data into the folder for the table data. We're uploading it directly in the Synapse Studio user interface in this exercise for expediency.
 
 3. In the **Data** pane on the left, on the **Workspace** tab, in the **...** menu for the **Customer** table, select **New SQL script** > **Select TOP 100 rows**. Then, in the new **SQL script 1** pane that has opened, ensure that the **Built-in** SQL pool is connected, and use the **&#9655; Run** button to run the SQL code. The results should include first 100 rows from the **Customer** table, based on the data stored in the underlying folder in the data lake.
+
+    ![Azure portal with a cloud shell pane](./images/DA-image89.png)
 
 4. Close the **SQL script 1** tab, discarding your changes.
 
@@ -299,6 +356,8 @@ In this task, you will be inserting data in to the table using notebook attached
 
 2. In the new **Notebook 1** pane, select the dropdown beside **Attach to** and select **spark*xxxxxxx**** Spark pool.
 
+    >**Note** : In case in **Attach to** **spark*xxxxxxx**** Spark pool is not represent kindly click on **Manage pools** then on **Apache Spark pool** page click on **+ New**. In Apache Spark pool name field provide name spark<inject key="DeploymentID" enableCopy="false"/> once deployment is complete select spark<inject key="DeploymentID" enableCopy="false"/> as mention in above step.
+    
 3. Enter the following code in the empty notebook cell:
 
     ```
@@ -322,14 +381,12 @@ In this task, you will be inserting data in to the table using notebook attached
 
 8. Close the **Notebook 1** pane, stopping the Spark session and discarding your changes.
 
-   <validation step="c7c2a4b7-1b09-4a42-a89c-255c051ca4e4" />
+ > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+ > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+ > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+ > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.   
 
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.   
+ <validation step="c7c2a4b7-1b09-4a42-a89c-255c051ca4e4" />
 
 ## Summary
 
