@@ -117,9 +117,9 @@ In this task, you will  be working with Synapse Studio where you will query the 
 
 ### Task 2.2: Use SQL to query CSV files
 
-1. Select the **csv** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
+1. Right-click the **csv** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
 
-2. In the **File type** list, select **Text format**, and then apply the settings to open a new SQL script that queries the data in the folder.
+2. In the **File type** list, select **Text format**, and then **Apply** the settings to open a new SQL script that queries the data in the folder.
 
 3. In the **Properties** pane for **SQL Script 1** that is created, change the name to **Sales CSV query**, and change the result settings to show **All rows**. Then in the toolbar, select **Publish** to save the script and use the **Properties** button (which looks similar to **&#128463;**) on the right end of the toolbar to hide the **Properties** pane.
 
@@ -181,9 +181,9 @@ While CSV is an easy format to use, it's common in big data processing scenarios
 
 1. In the **files** tab contaning the file system for your data lake, return to the **sales** folder so you can see the **csv**, **json**, and **parquet** folders.
 
-2. Select the **parquet** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
+2. Right-click the **parquet** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
 
-3. In the **File type** list, select **Parquet format**, and then apply the settings to open a new SQL script that queries the data in the folder. The script should look similar to this:
+3. In the **File type** list, select **Parquet format**, and then **Apply** the settings to open a new SQL script that queries the data in the folder. The script should look similar to this:
 
     ```SQL
     -- This is auto-generated code
@@ -241,9 +241,9 @@ JSON is another popular data format, so it;s useful to be able to query .json fi
 
 1. In the **files** tab containing the file system for your data lake, return to the **sales** folder so you can see the **csv**, **json**, and **parquet** folders.
 
-2. Select the **json** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
+2. Right-click the **json** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
 
-3. In the **File type** list, select **Text format**, and then apply the settings to open a new SQL script that queries the data in the folder. The script should look similar to this:
+3. In the **File type** list, select **Text format**, and then **Apply** the settings to open a new SQL script that queries the data in the folder. The script should look similar to this:
 
     ```sql
     -- This is auto-generated code
@@ -437,14 +437,12 @@ In this task, you will work on retriving the data using SQL script and visualize
 
 7. Experiment with the charting functionality in the query editor. It offers some basic charting capabilities that you can use while interactively exploring data, and you can save charts as images to include in reports. However, functionality is limited compared to enterprise data visualization tools such as Microsoft Power BI.
 
-   <validation step="1d10d0ee-5647-48b0-9de8-6c71a9ca1ac5" />
+ > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+ > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+ > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+ > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+ <validation step="1d10d0ee-5647-48b0-9de8-6c71a9ca1ac5" />
 
 ## Summary
 
