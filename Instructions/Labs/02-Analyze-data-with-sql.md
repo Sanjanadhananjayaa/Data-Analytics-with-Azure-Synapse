@@ -25,20 +25,23 @@ You'll need an Azure Synapse Analytics workspace with access to data lake storag
 
 In this task, you'll use a combination of a PowerShell script and an ARM template to provision an Azure Synapse Analytics workspace.
 
-1. Click on the **Cloud Shell** button **[\>_]**  to the right of the search bar at the top of the page to create a new Cloud Shell, select  ***PowerShell*** environment and click on **Create storage** if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the **Azure portal**.
 
-    ![Azure portal with a cloud shell pane](./images/cloud-shell.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image1.png)
 
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). If so, select PowerShell.
 
-2. If you dont have storage account then, click on mount storage account and click on **Next**
+    ![Azure portal with a cloud shell pane](./images/DA-image2.png)
 
-   ![Azure portal with a cloud shell pane](./images/storagenew_1.png)
+    > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, use the the drop-down menu at the top left of the cloud shell pane to change it to ***PowerShell***.
 
-    > **Note**: If you have storage account already configured for the Azure CLI then please start performing the lab from the step 5.
+1. On Getting started window choose **Mount storage account(1)** then under Storage account subscription select your available **subscription (2)** from the dropdown and click on **Apply (3)**.
 
-3. Select we will create a storage account for you option and click on Next. wait for the deployment to finish, once the deployment completed you will see the powershell is active to get the inputs from you.
+   ![Azure portal with a cloud shell pane](./images/DA-image3.png)
 
-   ![Azure portal with a cloud shell pane](./images/storagenew_2.png)
+1. Within the Mount storage account pane, select **we will create a storage aacount for you (1)** and click **Next (2)**.
+
+    ![Azure portal with a cloud shell pane](./images/DA-image4.png)
 
 4. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
