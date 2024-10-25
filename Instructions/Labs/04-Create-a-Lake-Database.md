@@ -80,15 +80,18 @@ In this task, you will be modifying the container permissions to Microsoft Entra
 
 1. After the deployment script has completed, in the Azure portal, go to the **analyticsxxxxx** resource group that is created, and notice that this resource group contains your Synapse workspace, a Storage account for your data lake, and an Apache Spark pool.
 
-2. Select the **Storage account** named **datalakexxxxxxx** 
 
-3. Within the **datalakexxxxxx** container, select the **files** folder.
+    ![Azure portal with a cloud shell pane](./images/DA-image70.png)
+   
+3. Select the **Storage account** named **datalakexxxxxxx** 
+   
+4. Within the **datalakexxxxxx** page, from the left navigation pane expand **Data storage** and select **Container** then click **files** folder.
 
-    ![Select the files folder within the data lake container](./images/dp203-Container.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image71.png)
 
-4. Within the **files** folder you'll note the **Authentication method:** is listed as ***Access key (Switch to Microsoft Entra user account)*** click on this to change to Microsoft Entra User Account.
+5. Within the **files** folder you'll note the **Authentication method:** is listed as ***Access key (Switch to Microsoft Entra user account)*** click on this to change to Microsoft Entra User Account.
 
-    ![Change to Azure AD user account](./images/dp203-switch-to-aad-user.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image72.png)
 
 ## Task 3: Create a lake database in Synapse Studio
 
@@ -96,33 +99,47 @@ A lake database is a type of database that you can define in your workspace, and
 
 In this task, you will be creating a lake database with the RetailDB and modify its properties and publish it.
 
-1. Go back to the **analyticsxxxxx** resource group and select your Synapse workspace, and in its **Overview** page, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab, sign in if prompted.
+1. Go back to the **analyticsxxxxx** resource group and select your **Synapse workspace**.
 
-   ![](./images/labimg7.png)
+     ![Azure portal with a cloud shell pane](./images/DA-image73.png)
 
-2. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
+1. In the **Overview page** for your Synapse Workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
 
-3. On the **Data** **(1)** page, view the **Linked** **(2)** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account.
+   ![Azure portal with a cloud shell pane](./images/DA-image(8).png)
 
-   ![](./images/labimg3.png)    
+1. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
 
-4. On the **Data** page, switch back to the **Workspace** tab and note that there are no databases in your workspace.
+      ![Azure portal with a cloud shell pane](./images/DA-image(9).png)
 
-5. In the **+** menu, select **Lake database** to open a new tab in which you can design your database schema (accepting the database templates terms of use if prompted).
+1. On the **Data** **(1)** page, view the **Linked** **(2)** tab and verify that your workspace includes a link to your **Azure Data Lake Storage Gen2** storage account.
 
-   ![](./images/labimg8.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image74.png)
 
-6. In the **Properties** pane for the new database, change the **Name** to **RetailDB** and verify that the **Input folder** property is automatically updated to **files/RetailDB**. Leave the **Data format** as **Delimited Text** (you could also use *Parquet* format, and you can override the file format for individual tables - we'll use comma-delimited data in this exercise.)
+1. On the **Data** page, switch back to the **Workspace** tab and note that there are no databases in your workspace.
 
-   ![](./images/labimg9.png)
+     ![Azure portal with a cloud shell pane](./images/DA-image75.png)
+   
+1. In the **+ (1)** menu, select **Lake database (2)** to open a new tab in which you can design your database schema (accepting the database templates terms of use if prompted).
 
-7. At the top of the **RetailDB** pane, select **Publish** to save the database so far.
+   ![Azure portal with a cloud shell pane](./images/DA-image76.png)
 
-8. In the **Data** pane on the left, view the **Linked** tab. Then expand **Azure Data Lake Storage Gen2** and the primary **datalake*xxxxxxx*** storage for your **synapse*xxxxxxx*** workspace, and select the **files** file system, which currently contains a folder named **synapse**.
+1. In the **Properties** pane for the new database, change the **Name** to **RetailDB** and verify that the **Input folder** property is automatically updated to **files/RetailDB**. Leave the **Data format** as **Delimited Text** (you could also use *Parquet* format, and you can override the file format for individual tables - we'll use comma-delimited data in this exercise.)
 
-   ![](./images/labimg10.png)
+   ![Azure portal with a cloud shell pane](./images/DA-image77.png)
 
-9.  In the **files** tab that has opened, select **More** dropdown, then select **New folder** button to create a new folder named **RetailDB** - this will be the input folder for the data files used by tables in your database.
+1. At the top of the **RetailDB** pane, select **Publish** to save the database so far.
+
+     ![Azure portal with a cloud shell pane](./images/DA-image78.png)
+
+1. On **Publish all** page click on **Publish**.
+
+1. In the **Data** pane on the left, view the **Linked** tab. Then expand **Azure Data Lake Storage Gen2** and the primary **datalake*xxxxxxx*** storage for your **synapse*xxxxxxx*** workspace, and select the **files** file system, which currently contains a folder named **synapse**.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image79.png)
+
+1. In the **files** tab that has opened, select **New folder** button to create a new folder named **RetailDB** - this will be the input folder for the data files used by tables in your database.
+
+    ![Azure portal with a cloud shell pane](./images/DA-image80.png)
 
 ## Task 4: Create a table 
 
