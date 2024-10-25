@@ -25,45 +25,47 @@ You'll need an Azure Synapse Analytics workspace with access to data lake storag
 
 In this task, you'll use a combination of a PowerShell script and an ARM template to provision an Azure Synapse Analytics workspace.
 
-1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***PowerShell*** environment and click on **Create storage** if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+1. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the **Azure portal**.
 
-    ![Azure portal with a cloud shell pane](./images/cloud-shell.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image1.png)
 
-    > **Note**: If you have previously created a cloud shell that uses a *Bash* environment, use the the drop-down menu at the top left of the cloud shell pane to change it to ***PowerShell***.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (Bash or PowerShell). If so, select PowerShell.
 
-2. If you dont have storage account then, click on mount storage account and click on **Next**
+    ![Azure portal with a cloud shell pane](./images/DA-image2.png)
+  
+    **Important** : If you have storage account already configured for the Azure CLI, then please start performing the lab from the step 5.
 
-   ![Azure portal with a cloud shell pane](./images/storagenew_1.png)
+1. On Getting started window choose **Mount storage account(1)** then under Storage account subscription select your available **subscription (2)** from the dropdown and click on **Apply (3)**.
 
-    > **Note**: If you have storage account already configured for the Azure CLI, then please start performing the lab from the step 5.
+   ![Azure portal with a cloud shell pane](./images/DA-image3.png)
 
-3. Select we will create a storage account for you option and click on Next. wait for the deployment to finish, once the deployment completed you will see the powershell is active to get the inputs from you.
+1. Within the Mount storage account pane, select **we will create a storage aacount for you (1)** and click **Next (2)**.
 
-   ![Azure portal with a cloud shell pane](./images/storagenew_2.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image4.png)
 
-4. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+1. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
-5. In the PowerShell pane, enter the following commands to clone this repo:
+1. In the PowerShell pane, enter the following commands to clone this repo:
 
     ```
     rm -r synapse -f
     git clone https://github.com/CloudLabsAI-Azure/Data-Analytics-with-Azure-Synapse synapse
     ```
 
-6. After the repo has been cloned, enter the following commands to change to the folder for this exercise and run the **setup.ps1** script it contains:
+1. After the repo has been cloned, enter the following commands to change to the folder for this exercise and run the **setup.ps1** script it contains:
 
     ```
     cd synapse/Allfiles/labs/03
     ./setup.ps1
     ```
 
-7. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
+1. If prompted, choose which subscription you want to use (this will only happen if you have access to multiple Azure subscriptions).
    
-8. When prompted, enter a suitable password to be set for your Azure Synapse SQL pool.
+1. When prompted, enter a suitable password to be set for your Azure Synapse SQL pool.
 
     > **Note**: Be sure to remember this password!
 
-9. Wait for the script to complete - this typically takes around 10 minutes, but in some cases may take longer. While you are waiting, review the [CETAS with Synapse SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/develop-tables-cetas) article in the Azure Synapse Analytics documentation.
+1. Wait for the script to complete - this typically takes around 10 minutes, but in some cases may take longer. While you are waiting, review the [CETAS with Synapse SQL](https://docs.microsoft.com/azure/synapse-analytics/sql/develop-tables-cetas) article in the Azure Synapse Analytics documentation.
 
 ## Task 2: Query data in files
 
@@ -73,35 +75,42 @@ In this task, you will be working on Synapse studio where you will query various
 
 ### Task 2.1: View files in the data lake
 
-1. After the script has completed, in the Azure portal, go to the **analytics** resource group that it created, and select your Synapse workspace.
-   
-2. In the **Overview** page for your Synapse workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
+1. After the script has completed, in the Azure portal search and select **Resource group**, select **analytics (1)** resource group that it created, and select your **Synapse workspace (2)**.
 
-   ![](./images/labimg7.png)
+    ![Azure portal with a cloud shell pane](./images/DA-image6.png)
+
+    ![Azure portal with a cloud shell pane](./images/DA-image(7).png)
+
    
-3. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
-   
-4. On the **Data** **(1)** page, view the **Linked** **(2)** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapse*xxxxxxx* (Primary - datalake*xxxxxxx*)**.
+1. In the **Overview page** for your Synapse Workspace, in the **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab; signing in if prompted.
+
+   ![Azure portal with a cloud shell pane](./images/DA-image(8).png)
+
+1. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks.
+
+     ![Azure portal with a cloud shell pane](./images/DA-image(9).png)
+
+1. On the **Data** **(1)** page, view the **Linked** **(2)** tab and verify that your workspace includes a link to your Azure Data Lake Storage Gen2 storage account, which should have a name similar to **synapse*xxxxxxx* (Primary - datalake*xxxxxxx*)**.
 
    ![](./images/labimg3.png)
    
-5. Expand your storage account and verify that it contains a file system container named **files**.
+1. Expand your storage account and verify that it contains a file system container named **files**.
    
-6. Select the **files** container, and note that it contains a folder named **sales**. This folder contains the data files you are going to query.
+1. Select the **files** container, and note that it contains a folder named **sales**. This folder contains the data files you are going to query.
 
    ![](./images/lamimg4.png)
    
-7. Open the **sales** folder and the **csv** folder it contains, and observe that this folder contains .csv files for three years of sales data.
+1. Open the **sales** folder and the **csv** folder it contains, and observe that this folder contains .csv files for three years of sales data.
 
    ![](./images/labimg5.png)
    
-8. Right-click any of the files and select **Preview** to see the data it contains. Note that the files contain a header row.
+1. Right-click any of the files and select **Preview** to see the data it contains. Note that the files contain a header row.
    
-9. Close the preview, and then use the **&#8593;** button to navigate back to the **sales** folder.
+1. Close the preview, and then use the **&#8593;** button to navigate back to the **sales** folder.
 
 ### Task 2.2: Use SQL to query CSV files
 
-1. Select the **csv** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
+1. Right click the **csv** folder, and then in the **New SQL script** list on the toolbar, select **Select TOP 100 rows**.
    
 2. In the **File type** list, select **Text format**, and then apply the settings to open a new SQL script that queries the data in the folder.
    
@@ -326,14 +335,12 @@ In this task, you will create the stored procedure using SQL script and get the 
     
 10. Switch back to the SQL script and re-run the `EXEC sp_GetYearlySales;` statement. This time, the operation succeeds and a new data file is generated.
 
-  <validation step="24a2fe45-1282-4894-a6b8-35bbfc5f23eb" />
+ > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+ > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+ > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+ > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-  **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+ <validation step="24a2fe45-1282-4894-a6b8-35bbfc5f23eb" />
 
 ## Summary
 
