@@ -261,7 +261,7 @@ In this task, we will use a serverless SQL pool to query and analyze data stored
 
     ![Azure portal with a cloud shell pane](./images/DA-image55.png)
 
-4. In the code (replacing *datalakexxxxxxx* with the name of your data lake storage account) on the toolbar, use the **&#9655; Run** button to run the SQL code, and review the results, which should look similar to this:
+4. On the toolbar, use the **&#9655; Run** button to run the SQL code, and review the results, which should look similar to this:
 
     | C1 | C2 | C3 | C4 |
     | -- | -- | -- | -- |
