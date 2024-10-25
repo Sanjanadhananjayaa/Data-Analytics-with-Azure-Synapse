@@ -33,7 +33,7 @@ In this task, you'll use a combination of a PowerShell script and an ARM templat
 
     ![Azure portal with a cloud shell pane](./images/DA-image2.png)
   
-    **Important** : If you have storage account already configured for the Azure CLI, then please start performing the lab from the step 5.
+    **Important** : If you have storage account already configured for the Azure CLI, then please start performing the lab from the step 6.
 
 1. On Getting started window choose **Mount storage account(1)** then under Storage account subscription select your available **subscription (2)** from the dropdown and click on **Apply (3)**.
 
