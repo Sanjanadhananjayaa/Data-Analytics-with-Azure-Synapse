@@ -188,8 +188,8 @@ Now that you have created a lake database, you can define its schema by creating
    | **Name**         | **Description**           | **Description**     | **Data type**                |
    | ---------------  | ------------------------- | --------------------| ---------------------------- |
    |**LastName**      | **Customer last name**    | Check box **Null**  | **abc String**               |
-   |**EmailAddress**  | **Customer email**        | Uncheck box **Null**| **abc String**              |
-   |**Phone**  | **Customer phone**               | Uncheck box **Null**| **abc String**              |
+   |**EmailAddress**  | **Customer email**        | Uncheck box **Null**| **abc String**               |
+   |**Phone**         | **Customer phone**        | Check box **Null**  | **abc String**               |
    
 
    ![Change to Azure AD user account](./images/DP-203(4-3).png)
