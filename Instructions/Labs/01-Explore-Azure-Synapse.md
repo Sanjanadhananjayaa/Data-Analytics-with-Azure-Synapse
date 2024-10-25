@@ -227,8 +227,6 @@ In this task, we will ingest data into Azure Synapse Analytics by creating a pip
 
      ![Azure portal with a cloud shell pane](./images/DA-image55.png)
 
-   <validation step="839cbf4c-f048-4b81-bb5f-a2d033dc3e26" />
-
  > **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
