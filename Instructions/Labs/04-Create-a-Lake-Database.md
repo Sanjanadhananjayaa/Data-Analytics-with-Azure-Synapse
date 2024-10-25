@@ -356,6 +356,8 @@ In this task, you will be inserting data in to the table using notebook attached
 
 2. In the new **Notebook 1** pane, select the dropdown beside **Attach to** and select **spark*xxxxxxx**** Spark pool.
 
+    >**Note** : In case in **Attach to** **spark*xxxxxxx**** Spark pool is not represent kindly click on **Manage pools** then on **Apache Spark pool** page click on **+ New**. In Apache Spark pool name field provide name spark<inject key="DeploymentID" enableCopy="false"/> once deployment is complete select spark<inject key="DeploymentID" enableCopy="false"/> as mention in above step.
+    
 3. Enter the following code in the empty notebook cell:
 
     ```
